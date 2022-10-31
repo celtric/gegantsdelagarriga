@@ -1,6 +1,21 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import * as React from "react";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
+import Header from "./_header";
+import Footer from "./_footer";
+import {Container, CssBaseline} from "@mui/material";
+import {AppProps} from "next/app";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+const theme = createTheme();
+
+const App: React.FC<AppProps> = ({ Component, pageProps }) => <ThemeProvider theme={theme}>
+  <CssBaseline />
+  <Container maxWidth="lg">
+    <Header />
+    <main>
+      <Component {...pageProps} />
+    </main>
+    <Footer />
+  </Container>
+</ThemeProvider>;
+
+export default App;
