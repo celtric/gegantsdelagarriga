@@ -1,5 +1,6 @@
-import {Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from "@mui/material";
 import * as React from "react";
+import {Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from "@mui/material";
+import NextLink from "next/link";
 
 type Props = {
   title: string,
@@ -10,7 +11,7 @@ type Props = {
 
 const SectionIntro: React.FC<Props> = ({title, route, description, image}) => {
   return <Grid item xs={12} md={6}>
-    <CardActionArea component="a" href={route}>
+    <CardActionArea component={NextLink} href={route}>
       <Card sx={{display: "flex"}} variant="outlined">
         <CardContent sx={{flex: 1}}>
           <Typography component="h2" variant="h5" gutterBottom>
