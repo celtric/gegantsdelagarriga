@@ -8,10 +8,10 @@ const Header: React.FC = () => {
   const router = useRouter();
   return <header>
     <Toolbar sx={{
-      backgroundImage: "url('https://i.imgur.com/w1bT6Dl.png')",
-      backgroundPosition: "left bottom",
+      backgroundImage: "url('https://i.imgur.com/w1bT6Dl.png'), url('https://i.imgur.com/1BytJRn.png')",
+      backgroundPosition: "left bottom, right 10px center",
       backgroundRepeat: "no-repeat",
-      backgroundSize: "auto 100px",
+      backgroundSize: "auto 100px, auto 60px",
       pb: 2,
       pt: 5
     }}>
