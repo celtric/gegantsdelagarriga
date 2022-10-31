@@ -23,7 +23,6 @@ const Header: React.FC = () => {
       component="nav"
       variant="dense"
       sx={{
-        bgcolor: "grey.200",
         borderBottom: 1,
         borderTop: 1,
         borderColor: "divider",
