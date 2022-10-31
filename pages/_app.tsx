@@ -5,9 +5,22 @@ import Footer from "./_footer";
 import {Container, CssBaseline} from "@mui/material";
 import {AppProps} from "next/app";
 
-const theme = createTheme();
+const headerFont = {
+  fontFamily: "Libre Baskerville"
+};
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => <ThemeProvider theme={theme}>
+const theme = createTheme({
+  typography: {
+    h1: headerFont,
+    h2: headerFont,
+    h3: headerFont,
+    h4: headerFont,
+    h5: headerFont,
+    h6: headerFont
+  }
+});
+
+const App: React.FC<AppProps> = ({Component, pageProps}) => <ThemeProvider theme={theme}>
   <CssBaseline />
   <Container maxWidth="lg">
     <Header />

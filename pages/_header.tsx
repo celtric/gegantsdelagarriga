@@ -6,15 +6,14 @@ import {pages} from "../data";
 
 const Header: React.FC = () => {
   const router = useRouter();
-  console.log(router);
   return <header>
     <Toolbar sx={{
-      pb: 2,
-      pt: 5,
       backgroundImage: "url('https://i.imgur.com/w1bT6Dl.png')",
       backgroundPosition: "left bottom",
       backgroundRepeat: "no-repeat",
-      backgroundSize: "auto 100px"
+      backgroundSize: "auto 100px",
+      pb: 2,
+      pt: 5
     }}>
       <Typography component="h2" variant="h4" align="center" sx={{flex: 1}}>
         Gegants de la Garriga
@@ -23,9 +22,18 @@ const Header: React.FC = () => {
     <Toolbar
       component="nav"
       variant="dense"
-      sx={{justifyContent: "space-between", borderBottom: 1, borderTop: 1, borderColor: "divider", mb: 3}}>
+      sx={{
+        bgcolor: "grey.200",
+        borderBottom: 1,
+        borderTop: 1,
+        borderColor: "divider",
+        justifyContent: "space-around",
+        mb: 3
+    }}>
       {pages.map(page => page.route === router.route
-        ? <Typography key={page.title} variant="body1" sx={{fontWeight: "bold"}}>{page.title}</Typography>
+        ? <Typography key={page.title} variant="body1" sx={{fontWeight: "bold", fontFamily: "Libre Baskerville"}}>
+          {page.title}
+        </Typography>
         : <Link
           component={NextLink}
           color="inherit"
@@ -34,7 +42,7 @@ const Header: React.FC = () => {
           variant="body1"
           href={page.route}
           underline="hover"
-          sx={{p: 1, flexShrink: 0}}>{page.title}</Link>)}
+          sx={{p: 1, flexShrink: 0, fontFamily: "Libre Baskerville"}}>{page.title}</Link>)}
     </Toolbar>
   </header>;
 };

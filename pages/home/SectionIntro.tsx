@@ -10,7 +10,7 @@ type Props = {
 const SectionIntro: React.FC<Props> = ({title, description, image}) => {
   return <Grid item xs={12} md={6}>
     <CardActionArea component="a" href="#">
-      <Card sx={{display: "flex"}}>
+      <Card sx={{display: "flex"}} variant="outlined">
         <CardContent sx={{flex: 1}}>
           <Typography component="h2" variant="h5" gutterBottom>
             {title}

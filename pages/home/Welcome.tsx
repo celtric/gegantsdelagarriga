@@ -3,7 +3,7 @@ import {Avatar, Box, Grid, Link, Typography} from "@mui/material";
 import {blogLink, instagramLink, twitterLink} from "../../data";
 
 const Welcome: React.FC = () => {
-  return <Box sx={{p: 5, pb: 2, bgcolor: "grey.200", borderRadius: 1}}>
+  return <Box sx={{p: 5, pb: 2, bgcolor: "aliceblue", borderRadius: 1}}>
     <Grid container spacing={5}>
       <Grid item xs>
         <Typography component="h1" variant="h4" color="" gutterBottom>

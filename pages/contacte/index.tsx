@@ -1,7 +1,11 @@
 import React from "react";
+import Head from "next/head";
 
 const Index: React.FC = () => {
-  return <>Contacte</>;
+  return <>
+    <Head><title>Contacte</title></Head>
+    Contacte
+  </>;
 };
 
 export default Index;

@@ -2,6 +2,7 @@ import React from "react";
 import {Grid} from "@mui/material";
 import Welcome from "./Welcome";
 import SectionIntro from "./SectionIntro";
+import Head from "next/head";
 
 const sectionIntros = [
   {
@@ -27,14 +28,17 @@ const sectionIntros = [
 ];
 
 const Home: React.FC = () => {
-  return <Grid container direction="column" spacing={2}>
-    <Grid item>
-      <Welcome />
+  return <>
+    <Head><title>Gegants de la Garriga</title></Head>
+    <Grid container direction="column" spacing={3}>
+      <Grid item>
+        <Welcome />
+      </Grid>
+      <Grid item container spacing={4}>
+        {sectionIntros.map(sectionIntro => <SectionIntro key={sectionIntro.title} {...sectionIntro} />)}
+      </Grid>
     </Grid>
-    <Grid item container spacing={4}>
-      {sectionIntros.map(sectionIntro => <SectionIntro key={sectionIntro.title} {...sectionIntro} />)}
-    </Grid>
-  </Grid>;
+  </>;
 };
 
 export default Home;

@@ -4,7 +4,7 @@ import {Box, Grid, Link, Typography} from "@mui/material";
 import {instagramLink, twitterLink} from "../data";
 
 const Footer: React.FC = () => {
-  return <Box component="footer" sx={{bgcolor: "background.paper", py: 2, my: 4, borderTop: 1, borderColor: "divider"}}>
+  return <Box component="footer" sx={{bgcolor: "background.paper", py: 3, my: 4, borderTop: 1, borderColor: "divider"}}>
     <Grid container justifyContent="center" spacing={1}>
       <Grid item>
         <Link href={instagramLink} target="_blank"><Instagram /></Link>
