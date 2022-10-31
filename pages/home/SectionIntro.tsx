@@ -3,13 +3,14 @@ import * as React from "react";
 
 type Props = {
   title: string,
-  description: string,
-  image: string
+  route: string,
+  description?: string,
+  image?: string
 };
 
-const SectionIntro: React.FC<Props> = ({title, description, image}) => {
+const SectionIntro: React.FC<Props> = ({title, route, description, image}) => {
   return <Grid item xs={12} md={6}>
-    <CardActionArea component="a" href="#">
+    <CardActionArea component="a" href={route}>
       <Card sx={{display: "flex"}} variant="outlined">
         <CardContent sx={{flex: 1}}>
           <Typography component="h2" variant="h5" gutterBottom>
