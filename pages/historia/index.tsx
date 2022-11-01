@@ -7,7 +7,6 @@ const Index: React.FC = () => {
     <Head><title>Història</title></Head>
     <Container maxWidth="md" sx={{mt: 5, mb: 10}}>
       <Typography component="h1" variant="h4" gutterBottom>Història</Typography>
-      <Divider sx={{mb: 3}} />
       <p>Els postres gegants van ésser construits per “ EL INGENIO”, per encàrrec del Sr. Salvador Juncosa de Santa Maria de la Geltrú, i cedits a la perròquia.</p>
       <p>Estrenats el 23 de maig del 1940, festivitat de Corpus.</p>
       <p>L´any 1958, amb l´estrena d´uns nous gegants, els antics són venuts a la parròquia de La Garriga, que els incorpora a les festivitats religioses.</p>

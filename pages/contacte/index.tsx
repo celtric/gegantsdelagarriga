@@ -1,13 +1,58 @@
 import React from "react";
 import Head from "next/head";
-import {Container, Divider, Typography} from "@mui/material";
+import {
+  Avatar,
+  Container,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemButton,
+  ListItemText,
+  Typography
+} from "@mui/material";
+import {Instagram, Link, Twitter} from "@mui/icons-material";
+import NextLink from "next/link";
+import {blogLink} from "../../data";
 
 const Index: React.FC = () => {
   return <>
     <Head><title>Contacte</title></Head>
     <Container maxWidth="md" sx={{mt: 5, mb: 10}}>
       <Typography component="h1" variant="h4" gutterBottom>Contacte</Typography>
-      <Divider sx={{mb: 3}} />
+      <Container maxWidth="xs">
+        <List>
+          <ListItem>
+            <ListItemButton component={NextLink} href={blogLink} target="_blank">
+              <ListItemAvatar>
+                <Avatar>
+                  <Link />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary="Blog" secondary={blogLink} />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton>
+              <ListItemAvatar>
+                <Avatar>
+                  <Instagram />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary="@gegantsdelagarriga" secondary="Instagram" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton>
+              <ListItemAvatar>
+                <Avatar>
+                  <Twitter />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText primary="@gegantsgarriga" secondary="Twitter" />
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Container>
     </Container>
   </>;
 };

@@ -1,11 +1,14 @@
 import * as React from "react";
-import {Instagram, Twitter} from "@mui/icons-material";
+import {Instagram, RssFeed, Twitter} from "@mui/icons-material";
 import {Box, Grid, Link, Typography} from "@mui/material";
-import {instagramLink, twitterLink} from "../data";
+import {blogLink, instagramLink, twitterLink} from "../data";
 
 const Footer: React.FC = () => {
   return <Box component="footer" sx={{bgcolor: "background.paper", py: 3, my: 4, borderTop: 1, borderColor: "divider"}}>
     <Grid container justifyContent="center" spacing={1}>
+      <Grid item>
+        <Link href={blogLink} target="_blank"><RssFeed /></Link>
+      </Grid>
       <Grid item>
         <Link href={instagramLink} target="_blank"><Instagram /></Link>
       </Grid>

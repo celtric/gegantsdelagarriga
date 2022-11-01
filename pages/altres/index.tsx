@@ -7,7 +7,6 @@ const Index: React.FC = () => {
     <Head><title>Altres</title></Head>
     <Container maxWidth="md" sx={{mt: 5, mb: 10}}>
       <Typography component="h1" variant="h4" gutterBottom>Altres</Typography>
-      <Divider sx={{mb: 3}} />
       <ul>
         <li>La colla</li>
         <li>Vestimenta</li>

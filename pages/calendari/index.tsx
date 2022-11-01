@@ -7,7 +7,6 @@ const Index: React.FC = () => {
     <Head><title>Calendari</title></Head>
     <Container maxWidth="md" sx={{mt: 5, mb: 10}}>
       <Typography component="h1" variant="h4" gutterBottom>Calendari</Typography>
-      <Divider sx={{mb: 3}} />
       <Grid container direction="column" spacing={5} alignItems="center">
         <Grid item>
           <Card>
@@ -33,27 +32,29 @@ const Index: React.FC = () => {
             </CardActions>
           </Card>
         </Grid>
-        {[0, 1, 2, 3, 4, 5].map(n => <Grid key={n} item>
-          <Card sx={{maxWidth: 400}}>
-            <CardMedia
-              component="img"
-              height="140"
-              image="https://i.imgur.com/oT1j3o1.png"
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                Sant Esteve de Palautordera &middot; 30 Octubre 2022
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra bibendum massa sed lobortis.
-                Donec id leo non odio imperdiet commodo id vel mauris.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small">Pàgina oficial de la trobada</Button>
-            </CardActions>
-          </Card>
-        </Grid>)}
+        <Grid item container spacing={5}>
+          {[0, 1].map(n => <Grid key={n} item>
+            <Card sx={{maxWidth: 400}}>
+              <CardMedia
+                component="img"
+                height="140"
+                image="https://i.imgur.com/oT1j3o1.png"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                  Sant Esteve de Palautordera &middot; 30 Octubre 2022
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra bibendum massa sed lobortis.
+                  Donec id leo non odio imperdiet commodo id vel mauris.
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small">Pàgina oficial de la trobada</Button>
+              </CardActions>
+            </Card>
+          </Grid>)}
+        </Grid>
       </Grid>
     </Container>
   </>;
