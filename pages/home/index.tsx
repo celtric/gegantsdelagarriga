@@ -1,7 +1,7 @@
 import React from "react";
 import {Grid} from "@mui/material";
-import Welcome from "./Welcome";
-import SectionIntro from "./SectionIntro";
+import Welcome from "../../components/Welcome";
+import SectionIntro from "../../components/SectionIntro";
 import Head from "next/head";
 import {pages} from "../../data";
 
