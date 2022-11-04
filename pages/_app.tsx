@@ -9,8 +9,8 @@ import {theme} from "../theme";
 const App: React.FC<AppProps> = ({Component, pageProps}) => <ThemeProvider theme={theme}>
   <CssBaseline />
   <Header />
-  <Box component="main" sx={{bgcolor: "#fff", p: 10, pt: 5}}>
-    <Container maxWidth="lg">
+  <Box component="main" sx={{bgcolor: "#fff", p: 1, "& img": {maxWidth: "100%"}}}>
+    <Container maxWidth="lg" sx={{mt: {xs: 2, md: 5}, mb: {xs: 5, md: 10}}}>
       <Component {...pageProps} />
     </Container>
   </Box>

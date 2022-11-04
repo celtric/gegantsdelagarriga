@@ -17,9 +17,9 @@ import {blogLink} from "../../data";
 const Index: React.FC = () => {
   return <>
     <Head><title>Contacte</title></Head>
-    <Container maxWidth="md" sx={{mt: 5, mb: 10}}>
+    <Container maxWidth="md" sx={{mt: 5, mb: 10}} disableGutters>
       <Typography component="h1" variant="h4" gutterBottom>Contacte</Typography>
-      <Container maxWidth="xs">
+      <Container maxWidth="xs" disableGutters>
         <List>
           <ListItem>
             <ListItemButton component={NextLink} href={blogLink} target="_blank">
@@ -28,7 +28,7 @@ const Index: React.FC = () => {
                   <Link />
                 </Avatar>
               </ListItemAvatar>
-              <ListItemText primary="Blog" secondary={blogLink} />
+              <ListItemText primary="Blog" secondary="gegantsdelagarriga.blogspot.com" />
             </ListItemButton>
           </ListItem>
           <ListItem>

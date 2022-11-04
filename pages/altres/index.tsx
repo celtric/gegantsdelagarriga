@@ -5,7 +5,7 @@ import {Container, Divider, Typography} from "@mui/material";
 const Index: React.FC = () => {
   return <>
     <Head><title>Altres</title></Head>
-    <Container maxWidth="md" sx={{mt: 5, mb: 10}}>
+    <Container maxWidth="md" sx={{mt: 5, mb: 10}} disableGutters>
       <Typography component="h1" variant="h4" gutterBottom>Altres</Typography>
       <ul>
         <li>La colla</li>

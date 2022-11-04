@@ -5,7 +5,7 @@ import {Button, Card, CardActions, CardContent, CardMedia, Container, Divider, G
 const Index: React.FC = () => {
   return <>
     <Head><title>Calendari</title></Head>
-    <Container maxWidth="md" sx={{mt: 5, mb: 10}}>
+    <Container maxWidth="md" sx={{mt: 5, mb: 10}} disableGutters>
       <Typography component="h1" variant="h4" gutterBottom>Calendari</Typography>
       <Grid container direction="column" spacing={5} alignItems="center">
         <Grid item>

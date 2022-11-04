@@ -5,7 +5,7 @@ import {Avatar, Container, Divider, Grid, Typography} from "@mui/material";
 const Index: React.FC = () => {
   return <>
     <Head><title>Els gegants</title></Head>
-    <Container maxWidth="md" sx={{mt: 5, mb: 10}}>
+    <Container maxWidth="md" sx={{mt: 5, mb: 10}} disableGutters>
       <Typography component="h1" variant="h4" gutterBottom>Els gegants</Typography>
       <Divider>Xixilona</Divider>
       <Grid container spacing={5}>
