@@ -6,7 +6,7 @@ const Welcome: React.FC = () => {
   return <Box sx={{p: {xs: 2, md: 5}, pb: {xs: 1, md: 2}, bgcolor: "aliceblue", borderRadius: 1}}>
     <Grid container spacing={5}>
       <Grid item xs>
-        <Typography component="h1" variant="h4" gutterBottom sx={{fontSize: {xs: 24, md: 34}}}>
+        <Typography component="h1" variant="h4" gutterBottom>
           Benvinguts i benvingudes!
         </Typography>
         <Typography variant="body1" color="inherit" paragraph>

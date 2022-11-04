@@ -26,7 +26,7 @@ const Header: React.FC = () => {
             xs: 3
           }
         }}>
-          <Typography component="h2" variant="h4" align="center" sx={{flex: 1, fontSize: {xs: 24, md: 34}}}>
+          <Typography component="h2" variant="h4" align="center" sx={{flex: 1}}>
             Gegants de la Garriga
           </Typography>
         </Toolbar>
@@ -67,11 +67,12 @@ const Header: React.FC = () => {
           textAlign: "center"
         }}
         disablePadding>
-        {pages.map(page => <MenuItem key={page.title} divider component={NextLink} href={page.route}>
-          <ListItemText
-            primary={page.title}
-            primaryTypographyProps={{fontWeight: page.route === router.route ? "bold" : undefined}} />
-        </MenuItem>)}
+        {pages.map(page =>
+          <MenuItem key={page.title} divider component={NextLink} href={page.route} onClick={() => toggleMobileMenu(false)}>
+            <ListItemText
+              primary={page.title}
+              primaryTypographyProps={{fontWeight: page.route === router.route ? "bold" : undefined}} />
+          </MenuItem>)}
       </MenuList>
     </Container>
   </>;

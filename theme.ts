@@ -9,13 +9,25 @@ export const theme = createTheme({
     background: {
       default: "#f6f8fa"
     }
-  },
-  typography: {
-    h1: headerFont,
-    h2: headerFont,
-    h3: headerFont,
-    h4: headerFont,
-    h5: headerFont,
-    h6: headerFont
   }
 });
+
+theme.typography.h4 = {
+  ...theme.typography.h4,
+  ...headerFont,
+  fontSize: 24,
+  [theme.breakpoints.up("md")]: {
+    fontSize: 34
+  }
+};
+
+theme.typography.h5 = {
+  ...theme.typography.h5,
+  ...headerFont,
+  fontSize: 16,
+  fontWeight: "bold",
+  [theme.breakpoints.up("md")]: {
+    fontSize: 24,
+    fontWeight: "normal"
+  }
+};
