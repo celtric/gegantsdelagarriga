@@ -1,34 +1,20 @@
 import * as React from "react";
-import {createTheme, ThemeProvider} from "@mui/material/styles";
+import {ThemeProvider} from "@mui/material/styles";
 import Header from "./_header";
 import Footer from "./_footer";
-import {Container, CssBaseline} from "@mui/material";
+import {Box, Container, CssBaseline} from "@mui/material";
 import {AppProps} from "next/app";
-
-const headerFont = {
-  fontFamily: "Libre Baskerville"
-};
-
-const theme = createTheme({
-  typography: {
-    h1: headerFont,
-    h2: headerFont,
-    h3: headerFont,
-    h4: headerFont,
-    h5: headerFont,
-    h6: headerFont
-  }
-});
+import {theme} from "../theme";
 
 const App: React.FC<AppProps> = ({Component, pageProps}) => <ThemeProvider theme={theme}>
   <CssBaseline />
-  <Container maxWidth="lg">
-    <Header />
-    <main>
+  <Header />
+  <Box component="main" sx={{bgcolor: "#fff", p: 10, pt: 5}}>
+    <Container maxWidth="lg">
       <Component {...pageProps} />
-    </main>
-    <Footer />
-  </Container>
+    </Container>
+  </Box>
+  <Footer />
 </ThemeProvider>;
 
 export default App;
