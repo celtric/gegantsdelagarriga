@@ -57,7 +57,7 @@ const Header: React.FC = () => {
             {isMobileMenuVisible && <Close />}
           </ListItemIcon>
           <ListItemText primaryTypographyProps={{fontWeight: "bold", marginLeft: -5}}>
-            {!isMobileMenuVisible && pages.find(page => page.route === router.route)!.title}
+            {!isMobileMenuVisible && pages.find(page => page.route === router.route)?.title}
           </ListItemText>
         </MenuItem>
       </MenuList>
