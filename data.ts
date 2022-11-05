@@ -16,14 +16,8 @@ export const pages = [
     image: "https://i.imgur.com/YUsGGsn.png"
   },
   {
-    title: "Història",
-    route: "/historia",
-    description: "Els nostres gegants han viscut una vida interessant durant més de 80 anys, coneix-la!",
-    image: "https://i.imgur.com/1sLdplx.png"
-  },
-  {
-    title: "Altres",
-    route: "/altres",
+    title: "La colla",
+    route: "/la-colla",
     description: "Curiositats de la colla, materials pels més petits...",
     image: "https://i.imgur.com/an3j9YW.png"
   },
