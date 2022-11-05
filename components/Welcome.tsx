@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Box, Grid, Link, Typography} from "@mui/material";
+import {Avatar, Box, Grid, Link, Typography} from "@mui/material";
 import {blogLink, instagramLink, twitterLink} from "../data";
 
 const Welcome: React.FC = () => {
@@ -17,6 +17,11 @@ const Welcome: React.FC = () => {
           nostre <Link href={blogLink} target="_blank">blog</Link> per conèixer les últimes novetats. Benvinguts i
           benvingudes!
         </Typography>
+      </Grid>
+      <Grid item sx={{display: {xs: "none", md: "block"}}}>
+        <Avatar
+          src="https://pbs.twimg.com/profile_images/835523581333352448/ZUOnACLn_400x400.jpg"
+          sx={{height: 150, width: 150, m: -2}} />
       </Grid>
     </Grid>
   </Box>;

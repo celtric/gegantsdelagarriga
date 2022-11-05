@@ -23,7 +23,9 @@ export const pages = [
   },
   {
     title: "Contacte",
-    route: "/contacte"
+    route: "/contacte",
+    description: "On trobar-nos a diferents xarxes socials",
+    image: "https://i.imgur.com/an3j9YW.png"
   }
 ];
 
