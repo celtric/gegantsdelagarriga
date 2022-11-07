@@ -14,11 +14,15 @@ const EmbeddedImage: React.FC<Props> = ({image, description, float}) => {
     mb: 2,
     ml: float === "right" ? 4 : 0,
     mr: float === "left" ? 4 : 0,
-    float: float,
+    float: {
+      xs: undefined,
+      md: float
+    },
     "& img": {
       display: "block",
       width: 300,
-      height: "auto"
+      height: "auto",
+      margin: "0 auto"
     }
   }}>
     <ImageListItem>

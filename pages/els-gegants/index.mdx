@@ -37,14 +37,9 @@ import FotoMussolet from "../../public/mussolet.jpg";
   l’inaugurem avui per la 30a Trobada, on a partir d’ara formarà part d’una figura més de la nostra colla.
 </DetallGegant>
 
-<Grid container spacing={5}>
-  <Grid item xs>
-    <DetallGegant name="Verdet" height="5 metres" weight="5 kg" image={FotoVerdet} petit />
-  </Grid>
-  <Grid item xs>
-    <DetallGegant name="Mussolet" height="1 metre" weight="2 kg" image={FotoMussolet} petit />
-  </Grid>
-</Grid>
+<DetallGegant name="Verdet" height="5 metres" weight="5 kg" image={FotoVerdet} />
+
+<DetallGegant name="Mussolet" height="1 metre" weight="2 kg" image={FotoMussolet} />
 
 export default function Layout({children}) {
   return <MarkdownPage title="Els gegants">{children}</MarkdownPage>;

@@ -12,7 +12,7 @@ const Home: React.FC = () => {
       <Grid item>
         <Welcome />
       </Grid>
-      <Grid item container spacing={4}>
+      <Grid item container spacing={{xs: 2, md: 4}}>
         {pages
           .filter(page => page.description !== undefined)
           .map(page => <SectionIntro key={page.title} {...page} />)}
