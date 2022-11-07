@@ -1,16 +1,28 @@
-<div style={{maxWidth: 900, margin: "0 auto"}}>
-  # La colla
+import MarkdownPage from "../../components/MarkdownPage";
 
-  Informació de la colla
+# La colla
 
-  Els instruments
+## Informació de la colla
 
-  Repertori musical
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel ante tristique, quis finibus augue vehicula. In lectus velit, sagittis vitae mollis nec, convallis a lorem. Fusce lacinia tortor sapien, lobortis feugiat dui sagittis at. Vestibulum malesuada gravida diam. Donec quis tempor dui, at porta dolor. Duis vel tincidunt magna. Sed non metus purus. Nullam aliquam volutpat sem sit amet semper.
 
-  Vestimenta?
+## Els instruments
 
-  Altres continguts:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel ante tristique, quis finibus augue vehicula. In lectus velit, sagittis vitae mollis nec, convallis a lorem. Fusce lacinia tortor sapien, lobortis feugiat dui sagittis at. Vestibulum malesuada gravida diam. Donec quis tempor dui, at porta dolor. Duis vel tincidunt magna. Sed non metus purus. Nullam aliquam volutpat sem sit amet semper.
+
+## Repertori musical
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel ante tristique, quis finibus augue vehicula. In lectus velit, sagittis vitae mollis nec, convallis a lorem. Fusce lacinia tortor sapien, lobortis feugiat dui sagittis at. Vestibulum malesuada gravida diam. Donec quis tempor dui, at porta dolor. Duis vel tincidunt magna. Sed non metus purus. Nullam aliquam volutpat sem sit amet semper.
+
+## Vestimenta?
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel ante tristique, quis finibus augue vehicula. In lectus velit, sagittis vitae mollis nec, convallis a lorem. Fusce lacinia tortor sapien, lobortis feugiat dui sagittis at. Vestibulum malesuada gravida diam. Donec quis tempor dui, at porta dolor. Duis vel tincidunt magna. Sed non metus purus. Nullam aliquam volutpat sem sit amet semper.
+
+Altres continguts:
   - Material interactiu per nens i nenes? Per ex. trencaclosques online amb fotografies dels gegants
   - Imatges en blanc i negre per imprimir i pintar
   - Informació de com comprar els gegants de cartró
-</div>
+
+export default function Layout({children}) {
+  return <MarkdownPage title="La colla">{children}</MarkdownPage>;
+}

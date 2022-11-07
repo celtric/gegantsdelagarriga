@@ -14,7 +14,7 @@ const SectionIntro: React.FC<Props> = ({title, route, description, image}) => {
     <CardActionArea component={NextLink} href={route}>
       <Card sx={{display: "flex"}} variant="outlined">
         <CardContent sx={{flex: 1}}>
-          <Typography component="h2" variant="h5" gutterBottom>
+          <Typography component="h2" variant="h2" gutterBottom>
             {title}
           </Typography>
           <Typography variant="subtitle1">
