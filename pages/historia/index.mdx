@@ -1,6 +1,7 @@
 import MarkdownPage from "../../components/MarkdownPage";
 import EmbeddedImage from "../../components/EmbeddedImage";
-import { Divider, Grid, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
+import { Card, CardActionArea, CardContent, Grid, ImageListItem, ImageListItemBar, Typography } from "@mui/material";
+import { OpenInNew } from "@mui/icons-material";
 import Image from "next/image";
 import Foto1940 from "../../public/historia-1940.jpg";
 import Foto1981 from "../../public/historia-1981.jpg";
@@ -52,11 +53,35 @@ Surt per primera vegada el dia 9 de juny de 1991, amb motiu de la segona trobada
 
 Fins a dia d'avui els gegants s'han arrelat pregonament al poble de la Garriga esdevenint uns elements clau i històrics per entendre el patrimoni festiu local. Preservem-los, valorem-los, però sobretot, gaudim-los.
 
-<Typography variant="h2" sx={{clear: "both", textAlign: "center"}}>
-  ### Per molts i molts anys, Magí, Xixilona i el petit Benet!
-</Typography>
+<Typography variant="h2" sx={{clear: "both", my: {xs: 5, md: 10}, textAlign: "center"}}>Per molts i molts anys, Magí, Xixilona i el petit Benet!</Typography>
 
-<Divider sx={{my: 5}} />
+<Card sx={{my: 5}}>
+  <CardActionArea href="https://gegantsdelagarriga.blogspot.com/p/activitats.html" target="_blank" sx={{p: {xs: 0, md: 2}, pb: 0.5}}>
+    <CardContent>
+      <Grid container spacing={2}>
+        <Grid item><OpenInNew sx={{fontSize: 40}} color="primary" /></Grid>
+        <Grid item xs>
+          <Typography variant="h2" gutterBottom>Blog: Activitats</Typography>
+          Algunes fotografies històriques d'activitats que les antigues colles van realitzar durant els anys.
+        </Grid>
+      </Grid>
+    </CardContent>
+  </CardActionArea>
+</Card>
+
+<Card sx={{my: 5}}>
+  <CardActionArea href="https://gegantsdelagarriga.blogspot.com/2020/05/avui-els-gegants-de-la-garriga-fan-80.html" target="_blank" sx={{p: {xs: 0, md: 2}, pb: 0.5}}>
+    <CardContent>
+      <Grid container spacing={2}>
+        <Grid item><OpenInNew sx={{fontSize: 40}} color="primary" /></Grid>
+        <Grid item xs>
+          <Typography variant="h2" gutterBottom>Blog: Els gegants de la Garriga fan 80 anys!</Typography>
+          Un post amb més imatges i història dels nostres gegants
+        </Grid>
+      </Grid>
+    </CardContent>
+  </CardActionArea>
+</Card>
 
 <Grid container spacing={2}>
   <Grid item xs={12} md={6}>
@@ -93,30 +118,6 @@ Fins a dia d'avui els gegants s'han arrelat pregonament al poble de la Garriga e
     <ImageListItem sx={{"& img": {height: "auto"}}}>
       <Image src={Foto1995} alt="1995" />
       <ImageListItemBar title="1995" position="below" sx={{textAlign: "center"}} />
-    </ImageListItem>
-  </Grid>
-  <Grid item xs={12} md={6}>
-    <ImageListItem sx={{"& img": {height: "auto"}}}>
-      <Image src={FotoCursaPopular1991} alt="Cursa popular de la Garriga 1991" />
-      <ImageListItemBar title="Cursa popular de la Garriga 1991" position="below" sx={{textAlign: "center"}} />
-    </ImageListItem>
-  </Grid>
-  <Grid item xs={12} md={6}>
-    <ImageListItem sx={{"& img": {height: "auto"}}}>
-      <Image src={FotoCursaViladrauLaGarriga1993} alt="XXII Viladrau-la Garriga 14-2-1993" />
-      <ImageListItemBar title="XXII Viladrau-la Garriga 14-2-1993" position="below" sx={{textAlign: "center"}} />
-    </ImageListItem>
-  </Grid>
-  <Grid item xs={12} md={6}>
-    <ImageListItem sx={{"& img": {height: "auto"}}}>
-      <Image src={FotoCursaViladrauLaGarriga1994} alt="XXIII Viladrau-La Garriga 13-02-1994" />
-      <ImageListItemBar title="XXIII Viladrau-La Garriga 13-02-1994" position="below" sx={{textAlign: "center"}} />
-    </ImageListItem>
-  </Grid>
-  <Grid item xs={12} md={6}>
-    <ImageListItem sx={{"& img": {height: "auto"}}}>
-      <Image src={FotoCanDuran1989} alt="Can Duran 1-10-1989" />
-      <ImageListItemBar title="Can Duran 1-10-1989" position="below" sx={{textAlign: "center"}} />
     </ImageListItem>
   </Grid>
 </Grid>
