@@ -2,13 +2,19 @@ import MarkdownPage from "../../components/MarkdownPage";
 import DetallGegant from "../../components/DetallGegant";
 import { Grid } from "@mui/material";
 import FullSizeImage from "../../components/FullSizeImage";
-import ImatgeTotsElsGegants from "../../public/gegants-de-la-garriga.jpg";
+import FotoTotsElsGegants from "../../public/gegants-de-la-garriga.jpg";
+import FotoXixilona from "../../public/xixilona.jpg";
+import FotoMagi from "../../public/magi.jpg";
+import FotoBenet from "../../public/benet.jpg";
+import FotoGarric from "../../public/garric.jpg";
+import FotoVerdet from "../../public/verdet.jpg";
+import FotoMussolet from "../../public/mussolet.jpg";
 
 # Els Gegants
 
-<FullSizeImage image={ImatgeTotsElsGegants} alt="Els gegants de la Garriga" />
+<FullSizeImage image={FotoTotsElsGegants} alt="Els gegants de la Garriga" />
 
-<DetallGegant name="Xixilona" height="3,3 metres" weight="31 kg" photo="https://via.placeholder.com/200x200">
+<DetallGegant name="Xixilona" height="3,3 metres" weight="31 kg" image={FotoXixilona}>
   L'any 1981 les figures van ser restaurades i recuperades pel grup d'animació local @Artristras. Els van batejar amb el
   nom de Magí i Xixilona oferint-lis una vida nova i integrant-los a les festes populars de la vila
 
@@ -17,26 +23,26 @@ import ImatgeTotsElsGegants from "../../public/gegants-de-la-garriga.jpg";
   mortuòria de la filla petita de Guifré el Pelós
 </DetallGegant>
 
-<DetallGegant name="Magí" height="3,35 metres" weight="33 kg" photo="https://via.placeholder.com/200x200">
+<DetallGegant name="Magí" height="3,35 metres" weight="33 kg" image={FotoMagi}>
   L'any 1981 les figures van ser restaurades i recuperades pel grup d'animació local @Artristras. Els van batejar amb el
   nom de Magí i Xixilona oferint-lis una vida nova i integrant-los a les festes populars de la vila.
 </DetallGegant>
 
-<DetallGegant name="Benet" height="2,5 metres" weight="16 kg" photo="https://via.placeholder.com/200x200">
+<DetallGegant name="Benet" height="2,5 metres" weight="16 kg" image={FotoBenet}>
   El gegantó es dirà Benet, que és el nom escollit pels nens del poble el dia 13 de juny de 1992.
 </DetallGegant>
 
-<DetallGegant name="Garric" height="1,8 metres" weight="6 kg" photo="https://via.placeholder.com/200x200">
+<DetallGegant name="Garric" height="1,8 metres" weight="6 kg" image={FotoGarric}>
   Es va construir l’any 2006, després d’anys d’estar sense sortir aquest any 2019 s’ha fet una reconstrucció i
   l’inaugurem avui per la 30a Trobada, on a partir d’ara formarà part d’una figura més de la nostra colla.
 </DetallGegant>
 
 <Grid container spacing={5}>
   <Grid item xs>
-    <DetallGegant name="Verdet" height="5 metres" weight="5 kg" photo="https://via.placeholder.com/200x200" petit />
+    <DetallGegant name="Verdet" height="5 metres" weight="5 kg" image={FotoVerdet} petit />
   </Grid>
   <Grid item xs>
-    <DetallGegant name="Mussolet" height="1 metre" weight="2 kg" photo="https://via.placeholder.com/200x200" petit />
+    <DetallGegant name="Mussolet" height="1 metre" weight="2 kg" image={FotoMussolet} petit />
   </Grid>
 </Grid>
 
