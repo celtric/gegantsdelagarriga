@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import {Instagram, Link, Twitter} from "@mui/icons-material";
 import NextLink from "next/link";
-import {blogLink} from "../../data";
+import {blogLink, instagramLink, twitterLink} from "../../data";
 
 const Index: React.FC = () => {
   return <>
@@ -32,7 +32,7 @@ const Index: React.FC = () => {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton component={NextLink} href={instagramLink} target="_blank">
               <ListItemAvatar>
                 <Avatar>
                   <Instagram />
@@ -42,7 +42,7 @@ const Index: React.FC = () => {
             </ListItemButton>
           </ListItem>
           <ListItem>
-            <ListItemButton>
+            <ListItemButton component={NextLink} href={twitterLink} target="_blank">
               <ListItemAvatar>
                 <Avatar>
                   <Twitter />

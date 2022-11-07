@@ -16,6 +16,12 @@ export const pages = [
     image: "https://i.imgur.com/YUsGGsn.png"
   },
   {
+    title: "Història",
+    route: "/historia",
+    description: "Els nostres gegants han viscut una vida interessant durant més de 80 anys, coneix-la!",
+    image: "https://2.bp.blogspot.com/-JmcIP5IsiGM/TpS6VaPv-eI/AAAAAAAAABw/VbSYX8KfTGg/s320/000+Postal+dels++anys+50.jpg"
+  },
+  {
     title: "La colla",
     route: "/la-colla",
     description: "Curiositats de la colla, materials pels més petits...",
@@ -23,9 +29,7 @@ export const pages = [
   },
   {
     title: "Contacte",
-    route: "/contacte",
-    description: "On trobar-nos a diferents xarxes socials",
-    image: "https://i.imgur.com/an3j9YW.png"
+    route: "/contacte"
   }
 ];
 

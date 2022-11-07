@@ -1,52 +1,44 @@
 import MarkdownPage from "../../components/MarkdownPage";
+import DetallGegant from "../../components/DetallGegant";
+import { Grid } from "@mui/material";
+import FullSizeImage from "../../components/FullSizeImage";
+import ImatgeTotsElsGegants from "../../public/gegants-de-la-garriga.jpg";
 
 # Els Gegants
 
-## Xixilona
+<FullSizeImage image={ImatgeTotsElsGegants} alt="Els gegants de la Garriga" />
 
-Contingut pendent.
+<DetallGegant name="Xixilona" height="3,3 metres" weight="31 kg" photo="https://via.placeholder.com/200x200">
+  L'any 1981 les figures van ser restaurades i recuperades pel grup d'animació local @Artristras. Els van batejar amb el
+  nom de Magí i Xixilona oferint-lis una vida nova i integrant-los a les festes populars de la vila
 
-## Magí
+  El nom de Xixilona fa referència a la làpida conservada a l'interior de l'ermita de Santa Maria del Camí on s'hi
+  llegeix: "Aquí descansa Quixilona de bona memòria, filla del comte Guifré." Correspon efectivament a la làpida
+  mortuòria de la filla petita de Guifré el Pelós
+</DetallGegant>
 
-Contingut pendent.
+<DetallGegant name="Magí" height="3,35 metres" weight="33 kg" photo="https://via.placeholder.com/200x200">
+  L'any 1981 les figures van ser restaurades i recuperades pel grup d'animació local @Artristras. Els van batejar amb el
+  nom de Magí i Xixilona oferint-lis una vida nova i integrant-los a les festes populars de la vila.
+</DetallGegant>
 
-## Benet
+<DetallGegant name="Benet" height="2,5 metres" weight="16 kg" photo="https://via.placeholder.com/200x200">
+  El gegantó es dirà Benet, que és el nom escollit pels nens del poble el dia 13 de juny de 1992.
+</DetallGegant>
 
-Contingut pendent.
+<DetallGegant name="Garric" height="1,8 metres" weight="6 kg" photo="https://via.placeholder.com/200x200">
+  Es va construir l’any 2006, després d’anys d’estar sense sortir aquest any 2019 s’ha fet una reconstrucció i
+  l’inaugurem avui per la 30a Trobada, on a partir d’ara formarà part d’una figura més de la nostra colla.
+</DetallGegant>
 
-## Garric
-
-Contingut pendent.
-
-## Verdet
-
-Contingut pendent.
-
-## Mussolet
-
-Contingut pendent.
-
-## Història
-
-El Gegants de la Garriga, tenen una història pròpia, la qual comença el dia de Corpus Christi de 1940, exactamen el 23 de maig de 1940 a la vila de Vilanova i la Geltrú. Una historia que, 19 anys mes tard els portaria, també un dia de Corpus Christi -el 28 de maig de 1959-, a compartir història a la nostra vila, convertint-se indiscutiblement durant els últims 60 anys, en una part indestriable del patrimoni cultural i festiu de La Garriga
-
-Els orígens d’aquest primers Gegants, els hem de situar a Vilanova i la Geltrú de l'any 1940. Construïts per el Taller ‟EL INGENIO”, per encàrrec del Sr Salvador Juncosa i modelats molt probablement per Lambert Escaler, son estrenats el 23 de maig de 1940 durant la festivitat de corpus i posteriorment el 1951, cedits a la Parròquia de Vilanova i la Geltrú,
-
-A la Geltrú no hi tingueren una vida massa llarga però sortien cada any per la Mare de Déu d'Agost aconduïts pels joves de la parròquia durant la seva Festa Major. Van sortir per última vegada el 15 d'agost de 1957
-
-Finalment, l’any 1958 comença la història dels Gegants de la Garriga, quant el rector de la parròquia de la Geltrú va vendre els gegants a la Garriga i es reestrenen el 28 de maig de 1959 durant la festivitat de Corpus juntament amb una colla de capgrossos. Des d'aquell dia les figures s'integraran dins el panorama festiu d'una vila que els rebé amb entusiasme.
-
-Els gegants de la Garriga en aquells anys sortien únicament per la processó de Corpus acompanyats d'un flabiol i fins ben entrada la dècada dels setanta no ens consta que les figures s'integressin a altres festes garriguenques com la Festa Major.
-
-Sabem que l'agost de 1972 van viatjar a la seva terra "natal" per assistir a l'estrena dels nous gegants de la Geltrú: l'Ulderich i la Guisla. També ens consta que l'any 1979 van viatjar en tren fins a Granollers per celebrar el 125è aniversari de l'arribada del ferrocarril.
-
-L'any 1981 les figures van ser restaurades i recuperades pel grup d'animació local @Artristras. Els van batejar amb el nom de Magí i Xixilona oferint-lis una vida nova i integrant-los a les festes populars de la vila.
-
-El nom de Xixilona fa referència a la làpida conservada a l'interior de l'ermita de Santa Maria del Camí on s'hi llegeix: "Aquí descansa Quixilona de bona memòria, filla del comte Guifré." Correspon efectivament a la làpida mortuòria de la filla petita de Guifré el Pelós.
-
-L'any 1989 es constitueix la colla de geganters que se'n fa càrrec de les figures ençà. L'any 1990 els gegants són restaurats a fons per l'escultor Ramon Aumedes del Taller Sarandaca de Granollers, per dotar-los de la comoditat i lleugeresa necessàries per assistir a les diverses trobades arreu de Catalunya configurant així la seva fesomia actual.
-
-Durant la restauració, aquells primers gegants fabricats per el taller El Ingenio el 1940, es perden.
+<Grid container spacing={5}>
+  <Grid item xs>
+    <DetallGegant name="Verdet" height="5 metres" weight="5 kg" photo="https://via.placeholder.com/200x200" petit />
+  </Grid>
+  <Grid item xs>
+    <DetallGegant name="Mussolet" height="1 metre" weight="2 kg" photo="https://via.placeholder.com/200x200" petit />
+  </Grid>
+</Grid>
 
 export default function Layout({children}) {
   return <MarkdownPage title="Els gegants">{children}</MarkdownPage>;
