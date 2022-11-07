@@ -1,4 +1,7 @@
 import MarkdownPage from "../../components/MarkdownPage";
+import { Alert, Link } from "@mui/material";
+import { MusicNote } from "@mui/icons-material";
+import NextLink from "next/link";
 import FullSizeImage from "../../components/FullSizeImage";
 import FotoLaColla from "../../public/la-colla.jpg";
 
@@ -12,9 +15,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel an
 
 ## Els instruments
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel ante tristique, quis finibus augue vehicula. In lectus velit, sagittis vitae mollis nec, convallis a lorem. Fusce lacinia tortor sapien, lobortis feugiat dui sagittis at. Vestibulum malesuada gravida diam. Donec quis tempor dui, at porta dolor. Duis vel tincidunt magna. Sed non metus purus. Nullam aliquam volutpat sem sit amet semper.
-
-## Repertori musical
+<Alert severity="success" icon={<MusicNote />} sx={{p: 2, my: 3, fontSize: 18}}>
+  <Link
+    component={NextLink}
+    href="https://gegantsdelagarriga.wixsite.com/repertori"
+    target="_blank"
+    color="inherit"
+    underline="hover">El Repertori Grallers Gegants la Garriga &rsaquo;</Link>
+</Alert>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel ante tristique, quis finibus augue vehicula. In lectus velit, sagittis vitae mollis nec, convallis a lorem. Fusce lacinia tortor sapien, lobortis feugiat dui sagittis at. Vestibulum malesuada gravida diam. Donec quis tempor dui, at porta dolor. Duis vel tincidunt magna. Sed non metus purus. Nullam aliquam volutpat sem sit amet semper.
 
@@ -22,7 +30,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel an
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum orci vel ante tristique, quis finibus augue vehicula. In lectus velit, sagittis vitae mollis nec, convallis a lorem. Fusce lacinia tortor sapien, lobortis feugiat dui sagittis at. Vestibulum malesuada gravida diam. Donec quis tempor dui, at porta dolor. Duis vel tincidunt magna. Sed non metus purus. Nullam aliquam volutpat sem sit amet semper.
 
-Altres continguts:
+## Altres continguts:
   - Material interactiu per nens i nenes? Per ex. trencaclosques online amb fotografies dels gegants
   - Imatges en blanc i negre per imprimir i pintar
   - Informació de com comprar els gegants de cartró
