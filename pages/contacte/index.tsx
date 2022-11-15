@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import {
-  Avatar,
+  Avatar, Box,
   Container,
   List,
   ListItem,
@@ -52,6 +52,20 @@ const Index: React.FC = () => {
             </ListItemButton>
           </ListItem>
         </List>
+        <Box textAlign="center">
+          <Typography sx={{fontWeight: "bold"}}>Cap de colla</Typography>
+          <Typography gutterBottom>Lluís Paris</Typography>
+          <Typography sx={{fontWeight: "bold"}}>Cap de comunicació</Typography>
+          <Typography gutterBottom>Joan Tarradas</Typography>
+          <Typography sx={{fontWeight: "bold"}}>Telèfon mòbil</Typography>
+          <Typography gutterBottom>618 474 135</Typography>
+          <Typography sx={{fontWeight: "bold"}}>Adreça electrònica colla</Typography>
+          <Typography gutterBottom>gegantsdelagarriga@gmail.com</Typography>
+          <Typography sx={{fontWeight: "bold"}}>Adreça electrònica comunicació</Typography>
+          <Typography gutterBottom>joan.tarradas2@gmail.com</Typography>
+          <Typography sx={{fontWeight: "bold"}}>Adreça</Typography>
+          <Typography gutterBottom>C/ Consell, 46, 08530 La Garriga</Typography>
+        </Box>
       </Container>
     </Container>
   </>;

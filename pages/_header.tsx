@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           backgroundSize: {xs: "auto 70%", md: "auto 80px"},
           pb: {
             xs: 3,
-            md: 4
+            md: 3
           },
           pt: {
             xs: 3,
