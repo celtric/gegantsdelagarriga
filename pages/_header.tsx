@@ -5,6 +5,7 @@ import NextLink from "next/link";
 import {useRouter} from "next/router";
 import {pages} from "../data";
 import {Close, Menu} from "@mui/icons-material";
+import LogoColla from "../public/logo-colla.jpg";
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -13,16 +14,17 @@ const Header: React.FC = () => {
     <Box component="header" sx={{bgcolor: "#fff"}}>
       <Container maxWidth="lg" disableGutters>
         <Toolbar sx={{
-          backgroundImage: {
-            md: "url('https://i.imgur.com/w1bT6Dl.png'), url('https://i.imgur.com/1BytJRn.png')"
-          },
-          backgroundPosition: "left bottom, right 10px center",
+          backgroundImage: `url('${LogoColla.src}')`,
+          backgroundPosition: {xs: "10px center", md: "center 20px"},
           backgroundRepeat: "no-repeat",
-          backgroundSize: "auto 100px, auto 60px",
-          pb: 2,
+          backgroundSize: {xs: "auto 70%", md: "auto 80px"},
+          pb: {
+            xs: 3,
+            md: 4
+          },
           pt: {
-            md: 5,
-            xs: 3
+            xs: 3,
+            md: 14
           }
         }}>
           <Typography variant="h1" align="center" sx={{flex: 1}}>
