@@ -187,7 +187,7 @@ const Index: React.FC = () => {
     <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
       <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2023</Typography>
       {data.map(({day, month, place, type, time}, index) => <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
-        <Grid container sx={{bgcolor: "#eee"}} alignItems="center">
+        <Grid container sx={{bgcolor: "#f6f8fa"}} alignItems="center">
           <Grid item xs={2} textAlign="center">
             <Typography variant="h6" component="span">{day}</Typography>
             <Typography>{month}</Typography>
