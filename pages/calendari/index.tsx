@@ -1,142 +1,203 @@
 import React from "react";
 import Head from "next/head";
-import {Card, CardContent, CardMedia, Container, Typography} from "@mui/material";
-import FotoCursaSantSilvestre from "../../public/cursa-sant-silvestre.jpg";
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineOppositeContent,
-  TimelineSeparator
-} from "@mui/lab";
-import {CalendarMonth, DirectionsRun, Hotel, SportsScore} from "@mui/icons-material";
+import {Container, Grid, Paper, Typography} from "@mui/material";
+
+type DataSchema = {
+  day: string,
+  month: string,
+  place: string,
+  type: string,
+  time: "Matí" | "Tarda" | "Vespre" | "Tot el dia"
+};
+
+const data: DataSchema[] = [
+  {
+    day: "21",
+    month: "Gener",
+    place: "Les Borges del Camp",
+    type: "Trobada",
+    time: "Matí"
+  },
+  {
+    day: "4",
+    month: "Febrer",
+    place: "Granollers",
+    type: "Cursa de gegants",
+    time: "Tarda"
+  },
+  {
+    day: "4 i 5",
+    month: "Març",
+    place: "La Garriga",
+    type: "Fira de la Botifarra",
+    time: "Tot el dia"
+  },
+  {
+    day: "19",
+    month: "Març",
+    place: "Manresa-Poble Nou",
+    type: "Trobada",
+    time: "Matí"
+  },
+  {
+    day: "15",
+    month: "Abril",
+    place: "Piera",
+    type: "Trobada",
+    time: "Tarda"
+  },
+  {
+    day: "16",
+    month: "Abril",
+    place: "La Garriga",
+    type: "Tres tombs",
+    time: "Matí"
+  },
+  {
+    day: "7",
+    month: "Maig",
+    place: "Cabrils",
+    type: "Trobada",
+    time: "Matí"
+  },
+  {
+    day: "3",
+    month: "Juny",
+    place: "La Garriga",
+    type: "XXXII Trobada",
+    time: "Tarda"
+  },
+  {
+    day: "8",
+    month: "Juny",
+    place: "La Garriga",
+    type: "Corpus",
+    time: "Matí"
+  },
+  {
+    day: "10",
+    month: "Juny",
+    place: "La Garriga",
+    type: "Corpus - Cercavila infantil",
+    time: "Tarda"
+  },
+  {
+    day: "11",
+    month: "Juny",
+    place: "La Garriga",
+    type: "Corpus - Catifa + Processó",
+    time: "Tot el dia"
+  },
+  {
+    day: "23",
+    month: "Juny",
+    place: "La Garriga",
+    type: "Flama del Canigó",
+    time: "Vespre"
+  },
+  {
+    day: "25",
+    month: "Juny",
+    place: "Olesa de Montserrat",
+    type: "Trobada",
+    time: "Matí"
+  },
+  {
+    day: "15",
+    month: "Juliol",
+    place: "Castellterçol",
+    type: "Trobada",
+    time: "Tarda"
+  },
+  {
+    day: "27",
+    month: "Juliol",
+    place: "La Garriga",
+    type: "Festa Major - Cercavila",
+    time: "Tarda"
+  },
+  {
+    day: "28",
+    month: "Juliol",
+    place: "La Garriga",
+    type: "Festa Major - Taller de didals",
+    time: "Tarda"
+  },
+  {
+    day: "30",
+    month: "Juliol",
+    place: "La Garriga",
+    type: "Festa Major - Cercavila avis",
+    time: "Matí"
+  },
+  {
+    day: "26",
+    month: "Agost",
+    place: "Sant Hilari Sacalm",
+    type: "Trobada",
+    time: "Matí"
+  },
+  {
+    day: "9",
+    month: "Setembre",
+    place: "Sant Celoni",
+    type: "Trobada",
+    time: "Tarda"
+  },
+  {
+    day: "16",
+    month: "Setembre",
+    place: "Sabadell-Gràcia",
+    type: "Trobada",
+    time: "Tarda"
+  },
+  {
+    day: "7 i 8",
+    month: "Octubre",
+    place: "La Garriga",
+    type: "Jornades Modernistes",
+    time: "Tot el dia"
+  },
+  {
+    day: "22",
+    month: "Octubre",
+    place: "Sabadell-Gràcia",
+    type: "Trobada comarcal",
+    time: "Matí"
+  },
+  {
+    day: "26",
+    month: "Novembre",
+    place: "Aiguafreda",
+    type: "Trobada",
+    time: "Matí"
+  },
+  {
+    day: "31",
+    month: "Desembre",
+    place: "La Garriga",
+    type: "Cursa de Sant Silvestre",
+    time: "Tarda"
+  }
+];
 
 const Index: React.FC = () => {
   return <>
-    <Head><title>Calendari</title></Head>
+    <Head><title>Calendari 2023</title></Head>
     <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
-      <Typography component="h1" variant="h1" gutterBottom>Calendari</Typography>
-      <Card sx={{mb: 5}}>
-        <CardMedia component="img" height="140" image={FotoCursaSantSilvestre.src} />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Propera sortida: Cursa de Sant Silvestre de la Garriga
-          </Typography>
-          <Typography gutterBottom component="div">
-            31 Desembre 2022
-          </Typography>
-          <Typography paragraph color="text.secondary">
-            Com cada any, participarem en la tradicional cursa de Sant Silvestre que organitzar el Club atletisme les
-            Tortugues de la Garriga. Ens veiem allà!
-          </Typography>
-        </CardContent>
-      </Card>
-      <Timeline position="right">
-        <TimelineItem>
-          <TimelineOppositeContent sx={{m: "auto 0"}} color="text.secondary">
-            Gener 2022
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="success"><SportsScore /></TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{py: 2}}>
-            <Typography variant="h6" component="span">
-              Inici de temporada 2022
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot>
-              <CalendarMonth />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{py: 2}}>
-            <Typography variant="h6" component="span">
-              Sortides vàries
-            </Typography>
-            <Typography>Cercaviles a altres pobles, activitats de festa major...</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent sx={{m: "auto 0"}} color="text.secondary">
-            Agost 2022
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot>
-              <Hotel />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{py: 2}}>
-            <Typography variant="h6" component="span">
-              Vacances
-            </Typography>
-            <Typography>Un mes per carregar les piles!</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot>
-              <CalendarMonth />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{py: 2}}>
-            <Typography variant="h6" component="span">
-              Sortides vàries
-            </Typography>
-            <Typography>Cercaviles a altres pobles</Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent sx={{m: "auto 0"}} color="text.secondary">
-            31 Desembre 2022
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <DirectionsRun />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{py: 2}}>
-            <Typography variant="h6" component="span">
-              Cursa de Sant Silvestre
-            </Typography>
-            <Typography>
-              Participarem en la tradicional cursa de Sant Silvestre que organitza el Club atletisme les Tortugues de la Garriga
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent sx={{m: "auto 0"}} color="text.secondary">
-            31 Desembre 2022
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="error"><SportsScore /></TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{py: 2}}>
-            <Typography variant="h6" component="span">
-              Fi de temporada 2022 😢
-            </Typography>
-            <Typography>
-              La cursa de Sant Silvestre serà l&apos;última sortida dels nostres gegants preferits. Però d&apos;aquí poc
-              penjarem el calendari de 2023!
-            </Typography>
-          </TimelineContent>
-        </TimelineItem>
-      </Timeline>
+      <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2023</Typography>
+      {data.map(({day, month, place, type, time}, index) => <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
+        <Grid container sx={{bgcolor: "#eee"}} alignItems="center">
+          <Grid item xs={2} textAlign="center">
+            <Typography variant="h6" component="span">{day}</Typography>
+            <Typography>{month}</Typography>
+          </Grid>
+          <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
+            <Typography variant="h6" component="span">{type}</Typography>
+            <Typography>{place}, {time}</Typography>
+          </Grid>
+        </Grid>
+      </Paper>)}
     </Container>
   </>;
 };
