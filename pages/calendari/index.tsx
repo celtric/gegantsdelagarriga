@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import {Container, Grid, Paper, Typography} from "@mui/material";
+import {Button, Container, Grid, Paper, Typography} from "@mui/material";
+import {Download} from "@mui/icons-material";
 
 type DataSchema = {
   day: string,
@@ -186,6 +187,11 @@ const Index: React.FC = () => {
     <Head><title>Calendari 2023</title></Head>
     <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
       <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2023</Typography>
+      <Typography paragraph align="center">
+        <Button variant="contained" startIcon={<Download />} href="/calendari-2023.pdf" target="_blank">
+          Descarregar calendari 2023 en PDF
+        </Button>
+      </Typography>
       {data.map(({day, month, place, type, time}, index) => <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
         <Grid container sx={{bgcolor: "#f6f8fa"}} alignItems="center">
           <Grid item xs={2} textAlign="center">
