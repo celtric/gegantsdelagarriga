@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import {Button, Container, Grid, Paper, Typography} from "@mui/material";
-import {Download} from "@mui/icons-material";
+import {Accordion, AccordionDetails, AccordionSummary, Button, Container, Grid, Paper, Typography} from "@mui/material";
+import {Download, ExpandMore} from "@mui/icons-material";
 
 type DataSchema = {
   day: string,
@@ -9,8 +9,7 @@ type DataSchema = {
   place: string,
   type: string,
   time: "Matí" | "Tarda" | "Vespre" | "Tot el dia",
-  done: boolean,
-  next?: boolean
+  done: boolean
 };
 
 const data: DataSchema[] = [
@@ -44,8 +43,7 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Fira de la Botifarra",
     time: "Tot el dia",
-    done: false,
-    next: true
+    done: false
   },
   {
     day: "11",
@@ -243,20 +241,39 @@ const Index: React.FC = () => {
           Descarregar calendari 2023 en PDF
         </Button>
       </Typography>
-      {data.map(({day, month, place, type, time, done, next}, index) => <Paper
-        key={index}
-        sx={{overflow: "hidden", mb: 2, opacity: done ? 0.4 : 1}}>
-        <Grid container sx={{bgcolor: next ? "#baebb7" : "#f6f8fa"}} alignItems="center">
-          <Grid item xs={2} textAlign="center">
-            <Typography variant="h6" component="span">{day}</Typography>
-            <Typography>{month}</Typography>
+      <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMore />}>Veure sortides ja realitzades aquest any</AccordionSummary>
+        <AccordionDetails>
+          {data.filter(({done}) => done).map(({day, month, place, type, time, done}, index) =>
+            <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
+              <Grid container sx={{bgcolor: "#f6f8fa"}} alignItems="center">
+                <Grid item xs={2} textAlign="center">
+                  <Typography variant="h6" component="span">{day}</Typography>
+                  <Typography>{month}</Typography>
+                </Grid>
+                <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
+                  <Typography variant="h6" component="span">{type}</Typography>
+                  <Typography>{place}, {time}</Typography>
+                </Grid>
+              </Grid>
+            </Paper>)}
+        </AccordionDetails>
+      </Accordion>
+      <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
+      {data.filter(({done}) => !done).map(({day, month, place, type, time, done}, index) =>
+        <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
+          <Grid container sx={{bgcolor: index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
+            <Grid item xs={2} textAlign="center">
+              <Typography variant="h6" component="span">{day}</Typography>
+              <Typography>{month}</Typography>
+            </Grid>
+            <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
+              <Typography variant="h6" component="span">{type}</Typography>
+              <Typography>{place}, {time}</Typography>
+            </Grid>
           </Grid>
-          <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
-            <Typography variant="h6" component="span">{type}</Typography>
-            <Typography>{place}, {time}</Typography>
-          </Grid>
-        </Grid>
-      </Paper>)}
+        </Paper>)}
     </Container>
   </>;
 };
