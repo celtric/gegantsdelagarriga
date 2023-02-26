@@ -243,7 +243,7 @@ const Index: React.FC = () => {
       </Typography>
       <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
       <Accordion>
-        <AccordionSummary expandIcon={<ExpandMore />}>Veure sortides ja realitzades aquest any</AccordionSummary>
+        <AccordionSummary expandIcon={<ExpandMore />}>Veure sortides ja realitzades</AccordionSummary>
         <AccordionDetails>
           {data.filter(({done}) => done).map(({day, month, place, type, time, done}, index) =>
             <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
