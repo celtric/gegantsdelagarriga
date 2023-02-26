@@ -8,7 +8,9 @@ type DataSchema = {
   month: string,
   place: string,
   type: string,
-  time: "Matí" | "Tarda" | "Vespre" | "Tot el dia"
+  time: "Matí" | "Tarda" | "Vespre" | "Tot el dia",
+  done: boolean,
+  next?: boolean
 };
 
 const data: DataSchema[] = [
@@ -17,168 +19,217 @@ const data: DataSchema[] = [
     month: "Gener",
     place: "Les Borges del Camp",
     type: "Trobada",
-    time: "Matí"
+    time: "Matí",
+    done: true
   },
   {
     day: "4",
     month: "Febrer",
     place: "Granollers",
     type: "Cursa de gegants",
-    time: "Tarda"
+    time: "Tarda",
+    done: true
+  },
+  {
+    day: "26",
+    month: "Febrer",
+    place: "La Garriga",
+    type: "Ball de gitanes",
+    time: "Matí",
+    done: true
   },
   {
     day: "4 i 5",
     month: "Març",
     place: "La Garriga",
     type: "Fira de la Botifarra",
-    time: "Tot el dia"
+    time: "Tot el dia",
+    done: false,
+    next: true
+  },
+  {
+    day: "11",
+    month: "Març",
+    place: "La Garriga",
+    type: "Presentació Federació",
+    time: "Tarda",
+    done: false
   },
   {
     day: "19",
     month: "Març",
     place: "Manresa-Poble Nou",
     type: "Trobada",
-    time: "Matí"
+    time: "Matí",
+    done: false
   },
   {
     day: "15",
     month: "Abril",
     place: "Piera",
     type: "Trobada",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   },
   {
     day: "16",
     month: "Abril",
     place: "La Garriga",
     type: "Tres tombs",
-    time: "Matí"
+    time: "Matí",
+    done: false
   },
   {
     day: "7",
     month: "Maig",
     place: "Cabrils",
     type: "Trobada",
-    time: "Matí"
+    time: "Matí",
+    done: false
   },
   {
     day: "3",
     month: "Juny",
     place: "La Garriga",
     type: "XXXII Trobada",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   },
   {
     day: "8",
     month: "Juny",
     place: "La Garriga",
     type: "Corpus",
-    time: "Matí"
+    time: "Matí",
+    done: false
   },
   {
     day: "10",
     month: "Juny",
     place: "La Garriga",
     type: "Corpus - Cercavila infantil",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   },
   {
     day: "11",
     month: "Juny",
     place: "La Garriga",
     type: "Corpus - Catifa + Processó",
-    time: "Tot el dia"
+    time: "Tot el dia",
+    done: false
   },
   {
     day: "23",
     month: "Juny",
     place: "La Garriga",
     type: "Flama del Canigó",
-    time: "Vespre"
+    time: "Vespre",
+    done: false
   },
   {
     day: "25",
     month: "Juny",
     place: "Olesa de Montserrat",
     type: "Trobada",
-    time: "Matí"
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "1",
+    month: "Juliol",
+    place: "La Garriga",
+    type: "100 anys de la colla Sardanista",
+    time: "Tarda",
+    done: false
   },
   {
     day: "15",
     month: "Juliol",
     place: "Castellterçol",
     type: "Trobada",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   },
   {
     day: "27",
     month: "Juliol",
     place: "La Garriga",
     type: "Festa Major - Cercavila",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   },
   {
     day: "28",
     month: "Juliol",
     place: "La Garriga",
     type: "Festa Major - Taller de didals",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   },
   {
     day: "30",
     month: "Juliol",
     place: "La Garriga",
     type: "Festa Major - Cercavila avis",
-    time: "Matí"
+    time: "Matí",
+    done: false
   },
   {
     day: "26",
     month: "Agost",
     place: "Sant Hilari Sacalm",
     type: "Trobada",
-    time: "Matí"
+    time: "Matí",
+    done: false
   },
   {
     day: "9",
     month: "Setembre",
     place: "Sant Celoni",
     type: "Trobada",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   },
   {
     day: "16",
     month: "Setembre",
     place: "Sabadell-Gràcia",
     type: "Trobada",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   },
   {
     day: "7 i 8",
     month: "Octubre",
     place: "La Garriga",
     type: "Jornades Modernistes",
-    time: "Tot el dia"
+    time: "Tot el dia",
+    done: false
   },
   {
     day: "22",
     month: "Octubre",
     place: "Sabadell-Gràcia",
     type: "Trobada comarcal",
-    time: "Matí"
+    time: "Matí",
+    done: false
   },
   {
     day: "26",
     month: "Novembre",
     place: "Aiguafreda",
     type: "Trobada",
-    time: "Matí"
+    time: "Matí",
+    done: false
   },
   {
     day: "31",
     month: "Desembre",
     place: "La Garriga",
     type: "Cursa de Sant Silvestre",
-    time: "Tarda"
+    time: "Tarda",
+    done: false
   }
 ];
 
@@ -192,8 +243,10 @@ const Index: React.FC = () => {
           Descarregar calendari 2023 en PDF
         </Button>
       </Typography>
-      {data.map(({day, month, place, type, time}, index) => <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
-        <Grid container sx={{bgcolor: "#f6f8fa"}} alignItems="center">
+      {data.map(({day, month, place, type, time, done, next}, index) => <Paper
+        key={index}
+        sx={{overflow: "hidden", mb: 2, opacity: done ? 0.4 : 1}}>
+        <Grid container sx={{bgcolor: next ? "#baebb7" : "#f6f8fa"}} alignItems="center">
           <Grid item xs={2} textAlign="center">
             <Typography variant="h6" component="span">{day}</Typography>
             <Typography>{month}</Typography>
