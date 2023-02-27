@@ -19,8 +19,13 @@ const Footer: React.FC = () => {
     <Typography variant="h6" align="center" gutterBottom>
       Gegants de la Garriga
     </Typography>
-    <Typography variant="body2" color="text.secondary" align="center">
+    <Typography variant="body2" color="text.secondary" align="center" mb={1}>
       Copyright © Colla de geganters de la Garriga {new Date().getFullYear()}
+    </Typography>
+    <Typography variant="body2" color="text.secondary" align="center">
+      <Link href="https://github.com/celtric/gegantsdelagarriga" color="text.secondary" underline="hover" target="_blank">
+        Veure històric de modificacions
+      </Link>
     </Typography>
   </Box>;
 };
