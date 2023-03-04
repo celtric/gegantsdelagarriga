@@ -33,6 +33,10 @@ export const pages = [
     image: FotoLaColla
   },
   {
+    title: "Projectes",
+    route: "/projectes"
+  },
+  {
     title: "Contacte",
     route: "/contacte"
   }
