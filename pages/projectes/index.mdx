@@ -1,0 +1,71 @@
+import MarkdownPage from "../../components/MarkdownPage";
+import {
+  Avatar,
+  Container,
+  Divider,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemButton,
+  ListItemText,
+  Paper
+} from "@mui/material";
+import { Accessibility, Inventory, SmartToy, ViewInAr } from "@mui/icons-material";
+import NextLink from "next/link";
+
+# Projectes
+
+<Container maxWidth="sm">
+  <Paper>
+    <List>
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <Accessibility />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText
+          primary="Gegants de cartró (en construcció)"
+          secondary="Gegants de cartró per muntar i jugar" />
+      </ListItem>
+      <Divider />
+      <ListItemButton component={NextLink} href="/projectes/robots-geganters">
+        <ListItemAvatar>
+          <Avatar>
+            <SmartToy />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText
+          primary="Robots geganters"
+          primaryTypographyProps={{color: "#1976d2"}}
+          secondary="Un experiment per fer ballar robots tal com ho fan els nostres gegants de veritat" />
+      </ListItemButton>
+      <Divider />
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <Inventory />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText
+          primary="Catàleg geganter (en construcció)"
+          secondary="Un recull dels elements que han format part de la història dels gegants" />
+      </ListItem>
+      <Divider />
+      <ListItem>
+        <ListItemAvatar>
+          <Avatar>
+            <ViewInAr />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText
+          primary="Digitalització 3D dels gegants (en construcció)"
+          secondary="Una iniciativa per crear figures en 3D que puguin servir per a la divulgació i per imprimir petites figures pels nens i nenes del poble" />
+      </ListItem>
+    </List>
+  </Paper>
+</Container>
+
+export default function Layout({children}) {
+  return <MarkdownPage title="Projectes">{children}</MarkdownPage>;
+}
