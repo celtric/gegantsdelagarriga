@@ -43,7 +43,7 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Fira de la Botifarra",
     time: "Tot el dia",
-    done: false
+    done: true
   },
   {
     day: "11",
@@ -51,7 +51,7 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Presentació Federació",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "19",
