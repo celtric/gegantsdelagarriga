@@ -47,7 +47,17 @@ export const pages: { title: string, route: string, isSelected: (route: string) 
 
 export const racoGeganterPages: {
   name: string,
-  route?: "/la-colla" | "/la-musica" | "/els-assajos" | "/pintables-de-gegants" | "/gegants-de-cartro" | "/figures-3d" | "/robots-geganters" | "/els-vestits" | "/les-disfresses" | "/records-de-trobades",
+  route?: "/la-colla"
+    | "/la-musica"
+    | "/els-assajos"
+    | "/pintables-de-gegants"
+    | "/gegants-de-cartro"
+    | "/robots-geganters"
+    | "/els-vestits"
+    | "/les-disfresses"
+    | "/records-trobades"
+    | "/cartells-trobades"
+    | "/catifes-corpus",
   indented?: boolean
 }[] = [
   {
@@ -76,11 +86,6 @@ export const racoGeganterPages: {
     indented: true
   },
   {
-    name: "Figures 3D",
-    route: "/figures-3d",
-    indented: true
-  },
-  {
     name: "Robots geganters",
     route: "/robots-geganters",
     indented: true
@@ -95,7 +100,15 @@ export const racoGeganterPages: {
   },
   {
     name: "Records de les trobades",
-    route: "/records-de-trobades"
+    route: "/records-trobades"
+  },
+  {
+    name: "Cartells de les trobades",
+    route: "/cartells-trobades"
+  },
+  {
+    name: "Catifes de Corpus",
+    route: "/catifes-corpus"
   },
 ];
 
