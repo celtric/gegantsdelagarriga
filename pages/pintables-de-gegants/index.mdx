@@ -1,0 +1,17 @@
+import { Button } from "@mui/material";
+import { Download } from "@mui/icons-material";
+import RacoGeganter from "../../components/RacoGeganter";
+import { racoGeganterPages } from "../../data";
+
+# Pintables de gegants
+
+A continuació podeu descarregar imatges en blanc i negre dels gegants per imprimir-los i pintar-los:
+
+<Button variant="contained" startIcon={<Download />} href="/pintables-gegants-la-garriga.pdf" target="_blank">Pintables
+  per imprimir</Button>
+
+export default function Layout({children}) {
+  return <RacoGeganter
+    title={racoGeganterPages.find(page => page.route === "/pintables-de-gegants").name}
+    selectedRoute={racoGeganterPages.find(page => page.route === "/pintables-de-gegants").route}>{children}</RacoGeganter>;
+}

@@ -1,0 +1,20 @@
+import { Alert, Link } from "@mui/material";
+import { MusicNote } from "@mui/icons-material";
+import RacoGeganter from "../../components/RacoGeganter";
+import { racoGeganterPages } from "../../data";
+
+# La música
+
+<Alert severity="success" icon={<MusicNote />} sx={{p: 2, my: 3, fontSize: 18}}>
+  <Link
+    href="https://gegantsdelagarriga.wixsite.com/repertori"
+    target="_blank"
+    color="inherit"
+    underline="hover">El Repertori Grallers Gegants la Garriga &rsaquo;</Link>
+</Alert>
+
+export default function Layout({children}) {
+  return <RacoGeganter
+    title={racoGeganterPages.find(page => page.route === "/la-musica").name}
+    selectedRoute={racoGeganterPages.find(page => page.route === "/la-musica").route}>{children}</RacoGeganter>;
+}

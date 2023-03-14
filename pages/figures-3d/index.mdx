@@ -1,0 +1,12 @@
+import RacoGeganter from "../../components/RacoGeganter";
+import { racoGeganterPages } from "../../data";
+
+# Figures 3D
+
+En construcció.
+
+export default function Layout({children}) {
+  return <RacoGeganter
+    title={racoGeganterPages.find(page => page.route === "/figures-3d").name}
+    selectedRoute={racoGeganterPages.find(page => page.route === "/figures-3d").route}>{children}</RacoGeganter>;
+}

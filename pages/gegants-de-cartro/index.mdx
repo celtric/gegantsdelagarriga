@@ -1,0 +1,12 @@
+import RacoGeganter from "../../components/RacoGeganter";
+import { racoGeganterPages } from "../../data";
+
+# Gegants de cartró
+
+En construcció.
+
+export default function Layout({children}) {
+  return <RacoGeganter
+    title={racoGeganterPages.find(page => page.route === "/gegants-de-cartro").name}
+    selectedRoute={racoGeganterPages.find(page => page.route === "/gegants-de-cartro").route}>{children}</RacoGeganter>;
+}
