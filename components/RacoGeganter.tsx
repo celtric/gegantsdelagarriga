@@ -20,7 +20,7 @@ import {racoGeganterPages} from "../data";
 
 const mdxComponents = {
   h1: ({children}: any) => <Typography component="h1" variant="h1" sx={{mb: 4}}>{children}</Typography>,
-  h2: ({children}: any) => <Typography component="h2" variant="h2" gutterBottom>{children}</Typography>,
+  h2: ({children}: any) => <Typography component="h2" variant="h2" sx={{my: 3}}>{children}</Typography>,
   p: ({children}: any) => <Typography paragraph>{children}</Typography>,
 };
 

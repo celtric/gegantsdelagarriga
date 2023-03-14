@@ -1,9 +1,22 @@
 import RacoGeganter from "../../components/RacoGeganter";
 import { racoGeganterPages } from "../../data";
+import FullSizeImage from "../../components/FullSizeImage";
+import FotoAssaigMusica from "../../public/assaig_musica.jpg";
+import FotoPortadors from "../../public/assaig_portadors.jpg";
 
 # Els assajos
 
-En construcció.
+## Els assajos de música
+
+<FullSizeImage image={FotoAssaigMusica} alt="Els músics assajant a l'escola Puiggraciós" />
+
+Les gralles i la resta de músics són els més dedicats de la colla, i es reuneixen cada dimecres i divendres a l'escola Puiggraciós.
+
+## Els assajos de gegants
+
+<FullSizeImage image={FotoPortadors} alt="Els portadors assajant a Can Luna" />
+
+Els portadors acostumen a assajar un cop al mes a Can Luna, acompanyats de músics pels balls.
 
 export default function Layout({children}) {
   return <RacoGeganter
