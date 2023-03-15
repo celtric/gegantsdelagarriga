@@ -1,0 +1,58 @@
+import RacoGeganter from "../../components/RacoGeganter";
+import { racoGeganterPages } from "../../data";
+import { Grid } from "@mui/material";
+import Link from "next/link";
+import FullSizeImage from "../../components/FullSizeImage";
+import DissenyCatifaCorpus2022 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2022.jpg";
+import DissenyCatifaCorpus2019 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2019.jpg";
+import DissenyCatifaCorpus2018 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2018.jpg";
+import DissenyCatifaCorpus2017 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2017.jpg";
+import DissenyCatifaCorpus2016 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2016.jpg";
+import DissenyCatifaCorpus2015 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2015.jpg";
+
+# Catifes de Corpus
+
+<Grid container spacing={2}>
+  <Grid item xs={6} md={2}>
+    ## 2022
+    <Link href="/dissenys-catifes-corpus/disseny-catifa-corpus-2022.jpg" target="_blank">
+      <FullSizeImage image={DissenyCatifaCorpus2022} alt="Disseny de la catifa de Corpus de 2022" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={6} md={2}>
+    ## 2019
+    <Link href="/dissenys-catifes-corpus/disseny-catifa-corpus-2019.jpg" target="_blank">
+      <FullSizeImage image={DissenyCatifaCorpus2019} alt="Disseny de la catifa de Corpus de 2019" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={6} md={2}>
+    ## 2018
+    <Link href="/dissenys-catifes-corpus/disseny-catifa-corpus-2018.jpg" target="_blank">
+      <FullSizeImage image={DissenyCatifaCorpus2018} alt="Disseny de la catifa de Corpus de 2018" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={6} md={2}>
+    ## 2017
+    <Link href="/dissenys-catifes-corpus/disseny-catifa-corpus-2017.jpg" target="_blank">
+      <FullSizeImage image={DissenyCatifaCorpus2017} alt="Disseny de la catifa de Corpus de 2017" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={6} md={2}>
+    ## 2016
+    <Link href="/dissenys-catifes-corpus/disseny-catifa-corpus-2016.jpg" target="_blank">
+      <FullSizeImage image={DissenyCatifaCorpus2016} alt="Disseny de la catifa de Corpus de 2016" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={6} md={2}>
+    ## 2015
+    <Link href="/dissenys-catifes-corpus/disseny-catifa-corpus-2015.jpg" target="_blank">
+      <FullSizeImage image={DissenyCatifaCorpus2015} alt="Disseny de la catifa de Corpus de 2015" mb={0} />
+    </Link>
+  </Grid>
+</Grid>
+
+export default function Layout({children}) {
+  return <RacoGeganter
+    title={racoGeganterPages.find(page => page.route === "/catifes-corpus").name}
+    selectedRoute={racoGeganterPages.find(page => page.route === "/catifes-corpus").route}>{children}</RacoGeganter>;
+}

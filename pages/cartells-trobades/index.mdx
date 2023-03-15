@@ -1,0 +1,51 @@
+import RacoGeganter from "../../components/RacoGeganter";
+import { racoGeganterPages } from "../../data";
+import { Grid } from "@mui/material";
+import Link from "next/link";
+import FullSizeImage from "../../components/FullSizeImage";
+import CartellTrobada2022 from "../../public/cartells-trobades/cartell-trobada-2022.jpg";
+import CartellTrobada2019 from "../../public/cartells-trobades/cartell-trobada-2019.jpg";
+import CartellTrobada2018 from "../../public/cartells-trobades/cartell-trobada-2018.jpg";
+import CartellTrobada2017 from "../../public/cartells-trobades/cartell-trobada-2017.jpg";
+import CartellTrobada2016 from "../../public/cartells-trobades/cartell-trobada-2016.jpg";
+
+# Cartells de les trobades
+
+<Grid container spacing={2}>
+  <Grid item xs={12} md={4}>
+    ## 2022
+    <Link href="/cartells-trobades/cartell-trobada-2022.jpg" target="_blank">
+      <FullSizeImage image={CartellTrobada2022} alt="Cartell de la trobada de 2022" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={12} md={4}>
+    ## 2019
+    <Link href="/cartells-trobades/cartell-trobada-2019.jpg" target="_blank">
+      <FullSizeImage image={CartellTrobada2019} alt="Cartell de la trobada de 2019" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={12} md={4}>
+    ## 2018
+    <Link href="/cartells-trobades/cartell-trobada-2018.jpg" target="_blank">
+      <FullSizeImage image={CartellTrobada2018} alt="Cartell de la trobada de 2018" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={12} md={4}>
+    ## 2017
+    <Link href="/cartells-trobades/cartell-trobada-2017.jpg" target="_blank">
+      <FullSizeImage image={CartellTrobada2017} alt="Cartell de la trobada de 2017" mb={0} />
+    </Link>
+  </Grid>
+  <Grid item xs={12} md={4}>
+    ## 2016
+    <Link href="/cartells-trobades/cartell-trobada-2016.jpg" target="_blank">
+      <FullSizeImage image={CartellTrobada2016} alt="Cartell de la trobada de 2016" mb={0} />
+    </Link>
+  </Grid>
+</Grid>
+
+export default function Layout({children}) {
+  return <RacoGeganter
+    title={racoGeganterPages.find(page => page.route === "/cartells-trobades").name}
+    selectedRoute={racoGeganterPages.find(page => page.route === "/cartells-trobades").route}>{children}</RacoGeganter>;
+}

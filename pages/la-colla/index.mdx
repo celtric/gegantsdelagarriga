@@ -1,8 +1,7 @@
-import MarkdownPage from "../../components/MarkdownPage";
-import { Alert, Button, Link } from "@mui/material";
-import { Download, MusicNote } from "@mui/icons-material";
 import FullSizeImage from "../../components/FullSizeImage";
 import FotoLaColla from "../../public/la-colla.jpg";
+import RacoGeganter from "../../components/RacoGeganter";
+import { racoGeganterPages } from "../../data";
 
 # La colla
 
@@ -10,27 +9,28 @@ import FotoLaColla from "../../public/la-colla.jpg";
 
 ## Informació de la colla
 
-Totes les persones de la colla són persones voluntàries. Algunes entren, altres surten, i mentrestant compartim l'afició per la cultura gegantera.
+Totes les persones de la colla són persones voluntàries. Algunes entren, altres surten, i mentrestant compartim l'afició
+per la cultura gegantera.
 
-Si has format part de la colla en algun moment i vols compartir-nos fotografies o històries per posar-les a la web, posa't en contacte amb nosaltres!
+Si has format part de la colla en algun moment i vols compartir-nos fotografies o històries per posar-les a la web,
+posa't en contacte amb nosaltres!
 
-## Els instruments
+## Uneix-te
 
-<Alert severity="success" icon={<MusicNote />} sx={{p: 2, my: 3, fontSize: 18}}>
-  <Link
-    href="https://gegantsdelagarriga.wixsite.com/repertori"
-    target="_blank"
-    color="inherit"
-    underline="hover">El Repertori Grallers Gegants la Garriga &rsaquo;</Link>
-</Alert>
+La Colla de Geganters de la Garriga es va fundar el 1989 i durant aquests 43 anys hem fet ballar els gegants participant
+en les festes populars de la Garriga. Les més importants són La Trobada Gegantera, Corpus i la Festa major. També hem representat el poble tot fent ballar els gegants arreu de Catalunya en les diferents sortides.
 
-## Pintables de gegants
+La Xixilona i en Magí, recuperats i restaurats 1981, són els nostres gegants. Sempre van acompanyats per l'entremaliat
+gegantó Benet, el drac Garric, el Verdet i el nostre estimat Mussolet.
 
-A continuació podeu descarregar imatges en blanc i negre dels gegants per imprimir-los i pintar-los:
+La colla està formada per 45 membres, sobretot famílies. Amb feina per a tothom: els portadors (pal de paller de la
+colla) que assagen un cop al mes els nous balls, les gralles i timbals afinant cada divendres, fotògraf, contes,
+vestuari, i altres feines menys visibles. I sobretot uns nens xalant de valent.
 
-<Button variant="contained" startIcon={<Download />} href="/pintables-gegants-la-garriga.pdf" target="_blank">Pintables
-  per imprimir</Button>
+Doncs ja sabeu, veniu a provar-ho!
 
 export default function Layout({children}) {
-  return <MarkdownPage title="La colla">{children}</MarkdownPage>;
+  return <RacoGeganter
+    title={racoGeganterPages.find(page => page.route === "/la-colla").name}
+    selectedRoute={racoGeganterPages.find(page => page.route === "/la-colla").route}>{children}</RacoGeganter>;
 }

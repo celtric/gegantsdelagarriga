@@ -37,7 +37,7 @@ const Header: React.FC = () => {
       <Toolbar
         component="nav"
         sx={{justifyContent: "space-around", display: {xs: "none", md: "flex"}}}>
-        {pages.map(page => page.route === router.route
+        {pages.map(page => page.isSelected(router.route)
           ? <Typography key={page.title} variant="body1" sx={{fontWeight: 700, fontFamily: "Roboto"}}>
             {page.title}
           </Typography>
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
             {isMobileMenuVisible && <Close />}
           </ListItemIcon>
           <ListItemText primaryTypographyProps={{fontWeight: 700, marginLeft: -5}}>
-            {!isMobileMenuVisible && pages.find(page => page.route === router.route)?.title}
+            {!isMobileMenuVisible && pages.find(page => page.isSelected(router.route))?.title}
           </ListItemText>
         </MenuItem>
       </MenuList>
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
           <MenuItem key={page.title} divider component={NextLink} href={page.route} onClick={() => toggleMobileMenu(false)}>
             <ListItemText
               primary={page.title}
-              primaryTypographyProps={{fontWeight: page.route === router.route ? 700 : undefined}} />
+              primaryTypographyProps={{fontWeight: page.isSelected(router.route) ? 700 : undefined}} />
           </MenuItem>)}
       </MenuList>
     </Container>
