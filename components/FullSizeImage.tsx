@@ -6,12 +6,13 @@ import {StaticImageData} from "next/dist/client/image";
 type Props = {
   image: StaticImageData,
   alt: string,
-  mb?: number
+  mb?: number,
+  width?: number
 };
 
-const FullSizeImage: React.FC<Props> = ({image, alt, mb = 4}) => {
+const FullSizeImage: React.FC<Props> = ({image, alt, mb = 4, width}) => {
   return <Box sx={{mb, "& img": {borderRadius: 2, display: "block", width: "100%", height: "auto"}}}>
-    <Image src={image} alt={alt} />
+    <Image src={image} alt={alt} width={width} />
   </Box>;
 };
 
