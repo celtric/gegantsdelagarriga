@@ -1,6 +1,7 @@
 import * as React from "react";
 import {Card, CardActionArea, CardContent, CardMedia, Grid, Typography} from "@mui/material";
 import NextLink from "next/link";
+import Image from "next/image";
 import {StaticImageData} from "next/dist/client/image";
 
 type Props = {
@@ -25,10 +26,9 @@ const SectionIntro: React.FC<Props> = ({title, route, description, image}) => {
             Seguir llegint...
           </Typography>
         </CardContent>
-        <CardMedia
-          component="img"
-          sx={{width: 160, height: 160, display: {xs: "none", sm: "block"}}}
-          image={image?.src} />
+        <CardMedia sx={{width: 160, height: 160, display: {xs: "none", sm: "block"}}}>
+          <Image src={image!.src} alt="" width={160} height={160} />
+        </CardMedia>
       </Card>
     </CardActionArea>
   </Grid>;
