@@ -59,7 +59,7 @@ const data: DataSchema[] = [
     place: "Manresa-Poble Nou",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "15",
