@@ -67,7 +67,7 @@ const data: DataSchema[] = [
     place: "Piera",
     type: "Trobada",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "16",
@@ -75,7 +75,7 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Tres tombs",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "7",
