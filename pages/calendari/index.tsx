@@ -236,11 +236,20 @@ const Index: React.FC = () => {
     <Head><title>Calendari 2023</title></Head>
     <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
       <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2023</Typography>
-      <Typography paragraph align="center">
-        <Button variant="contained" startIcon={<Download />} href="/calendari-2023.pdf" target="_blank">
-          Descarregar calendari 2023 en PDF
-        </Button>
-      </Typography>
+      <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
+      {data.filter(({done}) => !done).map(({day, month, place, type, time, done}, index) =>
+        <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
+          <Grid container sx={{bgcolor: index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
+            <Grid item xs={2} textAlign="center">
+              <Typography variant="h6" component="span">{day}</Typography>
+              <Typography>{month}</Typography>
+            </Grid>
+            <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
+              <Typography variant="h6" component="span">{type}</Typography>
+              <Typography>{place}, {time}</Typography>
+            </Grid>
+          </Grid>
+        </Paper>)}
       <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
       <Accordion>
         <AccordionSummary expandIcon={<ExpandMore />}>Veure sortides ja realitzades</AccordionSummary>
@@ -260,20 +269,11 @@ const Index: React.FC = () => {
             </Paper>)}
         </AccordionDetails>
       </Accordion>
-      <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
-      {data.filter(({done}) => !done).map(({day, month, place, type, time, done}, index) =>
-        <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
-          <Grid container sx={{bgcolor: index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
-            <Grid item xs={2} textAlign="center">
-              <Typography variant="h6" component="span">{day}</Typography>
-              <Typography>{month}</Typography>
-            </Grid>
-            <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
-              <Typography variant="h6" component="span">{type}</Typography>
-              <Typography>{place}, {time}</Typography>
-            </Grid>
-          </Grid>
-        </Paper>)}
+      <Typography paragraph align="center" sx={{mt: 4}}>
+        <Button variant="contained" startIcon={<Download />} href="/calendari-2023.pdf" target="_blank">
+          Descarregar calendari 2023 en PDF
+        </Button>
+      </Typography>
     </Container>
   </>;
 };
