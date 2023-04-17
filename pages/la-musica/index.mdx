@@ -2,6 +2,8 @@ import { Alert, Link } from "@mui/material";
 import { MusicNote } from "@mui/icons-material";
 import RacoGeganter from "../../components/RacoGeganter";
 import { racoGeganterPages } from "../../data";
+import FullSizeImage from "../../components/FullSizeImage";
+import Musics from "../../public/musics.jpg";
 
 # La música
 
@@ -12,6 +14,8 @@ import { racoGeganterPages } from "../../data";
     color="inherit"
     underline="hover">El Repertori Grallers Gegants la Garriga &rsaquo;</Link>
 </Alert>
+
+<FullSizeImage image={Musics} alt="Els músics assajant tocant als Tres Tombs de la Garriga 2023" width={700} />
 
 export default function Layout({children}) {
   return <RacoGeganter
