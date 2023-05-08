@@ -83,7 +83,7 @@ const data: DataSchema[] = [
     place: "Cabrils",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "3",
