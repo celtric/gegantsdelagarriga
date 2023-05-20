@@ -16,21 +16,18 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/lab": "^5.0.0-alpha.130",
     "@mui/material": "^5.13.1",
-    "@next/mdx": "^13.4.2",
+    "@next/mdx": "^13.4.3",
     "@vercel/analytics": "^1.0.1",
-    "next": "13.4.2",
+    "next": "13.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "20.2.0",
+    "@types/node": "20.2.1",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
     "typescript": "5.0.4"
-  },
-  "resolutions": {
-    "@types/react": "^17.0.38"
   }
 }
