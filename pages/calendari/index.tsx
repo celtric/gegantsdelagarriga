@@ -1,8 +1,20 @@
-import React from "react";
+import React, {Fragment} from "react";
 import Head from "next/head";
-import {Accordion, AccordionDetails, AccordionSummary, Button, Container, Grid, Paper, Typography} from "@mui/material";
-import {Download, ExpandMore} from "@mui/icons-material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Button,
+  Container,
+  Grid,
+  Link,
+  Paper,
+  Typography
+} from "@mui/material";
+import {ChevronRight, Download, ExpandMore} from "@mui/icons-material";
 import StandardPage from "../../components/StandardPage";
+import NextLink from "next/link";
+import {blue} from "@mui/material/colors";
 
 type DataSchema = {
   day: string,
@@ -239,19 +251,49 @@ const Index: React.FC = () => {
       <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
         <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2023</Typography>
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
-        {data.filter(({done}) => !done).map(({day, month, place, type, time, done}, index) =>
-          <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
-            <Grid container sx={{bgcolor: index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
-              <Grid item xs={2} textAlign="center">
-                <Typography variant="h6" component="span">{day}</Typography>
-                <Typography>{month}</Typography>
+        {data.filter(({done}) => !done).map(({day, month, place, type, time, done}, index) => <Fragment key={index}>
+          {type === "XXXII Trobada" &&
+            <Paper key={index} sx={{
+              display: "block",
+              textDecoration: "none",
+              overflow: "hidden",
+              mb: 2,
+              cursor: "pointer",
+              "&:hover": {outline: `2px solid ${blue["700"]}`}
+            }} component={NextLink} href="/calendari/2023/trobada">
+              <Grid container sx={{bgcolor: index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
+                <Grid item xs={2} textAlign="center">
+                  <Typography variant="h6" component="span">{day}</Typography>
+                  <Typography>{month}</Typography>
+                </Grid>
+                <Grid item container xs sx={{bgcolor: "#fff", p: 2, pt: 1}} alignItems="center">
+                  <Grid item xs>
+                    <Typography variant="h6" component="span">{type}</Typography>
+                    <Typography>{place}, {time}</Typography>
+                    <Typography>
+                      <Link>Més info &rsaquo;</Link>
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <ChevronRight fontSize="large" />
+                  </Grid>
+                </Grid>
               </Grid>
-              <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
-                <Typography variant="h6" component="span">{type}</Typography>
-                <Typography>{place}, {time}</Typography>
+            </Paper>}
+          {type !== "XXXII Trobada" &&
+            <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
+              <Grid container sx={{bgcolor: index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
+                <Grid item xs={2} textAlign="center">
+                  <Typography variant="h6" component="span">{day}</Typography>
+                  <Typography>{month}</Typography>
+                </Grid>
+                <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
+                  <Typography variant="h6" component="span">{type}</Typography>
+                  <Typography>{place}, {time}</Typography>
+                </Grid>
               </Grid>
-            </Grid>
-          </Paper>)}
+            </Paper>}
+        </Fragment>)}
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>Veure sortides ja realitzades</AccordionSummary>
