@@ -29,6 +29,7 @@ const Index: React.FC = () => {
         <Paper sx={{p: 3, mb: 2}}>Horaris</Paper>
         <Paper sx={{p: 3, mb: 2}}>Colles convidades</Paper>
         <Paper sx={{p: 3, mb: 2}}>Recorregut Google Maps</Paper>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1Wa8lUqe3Wv_fl38U-Ta3clPQ_WvEytg&ehbc=2E312F&z=16" width="100%" height="480" style={{border: "none"}}></iframe>
         <Paper sx={{p: 3, mb: 2}}>Recorregut PDF</Paper>
         <Paper sx={{p: 3, mb: 2}}>Cartell</Paper>
         <Paper sx={{p: 3, mb: 2}}>
