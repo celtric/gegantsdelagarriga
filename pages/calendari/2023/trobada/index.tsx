@@ -2,9 +2,11 @@ import React from "react";
 import Head from "next/head";
 import {Box, Container, Divider, Grid, Link, Paper, Typography} from "@mui/material";
 import FullSizeImage from "../../../../components/FullSizeImage";
-import {DesktopOnly} from "../../../../responsiveUtils";
+import {DesktopOnly, MobileOnly} from "../../../../responsiveUtils";
 import GegantsConvidats from "../../../../public/trobada-2023-gegants.png";
+import GegantsConvidatsSmall from "../../../../public/trobada-2023-gegants-small.png";
 import Cartell from "../../../../public/cartells-trobades/cartell-trobada-2023.jpg";
+import Image from "next/image";
 
 const trobada2023BackgroundColor = "#095577";
 const trobada2023BorderColor = "#082e3e";
@@ -19,6 +21,13 @@ const Index: React.FC = () => {
         </Container>
       </Box>
     </DesktopOnly>
+    <MobileOnly>
+      <Box sx={{borderTop: `4px solid ${trobada2023BorderColor}`, mb: -2}}>
+        <Box sx={{"& img": {display: "block", width: "100%", height: "auto"}}}>
+          <Image src={GegantsConvidatsSmall} alt="Tots els gegants convidats a la trobada" />
+        </Box>
+      </Box>
+    </MobileOnly>
     <Typography variant="h1" pt={5} mb={[2, 2, 4]} mx={2} align="center">
       XXXII Trobada de gegants de la Garriga
     </Typography>
