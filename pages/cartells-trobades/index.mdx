@@ -3,6 +3,7 @@ import { racoGeganterPages } from "../../data";
 import { Grid } from "@mui/material";
 import Link from "next/link";
 import FullSizeImage from "../../components/FullSizeImage";
+import CartellTrobada2023 from "../../public/cartells-trobades/cartell-trobada-2023.jpg";
 import CartellTrobada2022 from "../../public/cartells-trobades/cartell-trobada-2022.jpg";
 import CartellTrobada2019 from "../../public/cartells-trobades/cartell-trobada-2019.jpg";
 import CartellTrobada2018 from "../../public/cartells-trobades/cartell-trobada-2018.jpg";
@@ -12,6 +13,12 @@ import CartellTrobada2016 from "../../public/cartells-trobades/cartell-trobada-2
 # Cartells de les trobades
 
 <Grid container spacing={2}>
+  <Grid item xs={12} md={4}>
+    ## 2023
+    <Link href="/cartells-trobades/cartell-trobada-2023.jpg" target="_blank">
+      <FullSizeImage image={CartellTrobada2023} alt="Cartell de la trobada de 2023" mb={0} width={300} />
+    </Link>
+  </Grid>
   <Grid item xs={12} md={4}>
     ## 2022
     <Link href="/cartells-trobades/cartell-trobada-2022.jpg" target="_blank">
