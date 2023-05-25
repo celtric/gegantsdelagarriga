@@ -52,6 +52,7 @@ export const racoGeganterPages: {
     | "/els-assajos"
     | "/pintables-de-gegants"
     | "/gegants-de-cartro"
+    | "/mussolet-3d"
     | "/robots-geganters"
     | "/els-vestits"
     | "/les-disfresses"
@@ -83,6 +84,11 @@ export const racoGeganterPages: {
   {
     name: "Gegants de cartró",
     route: "/gegants-de-cartro",
+    indented: true
+  },
+  {
+    name: "Mussolet 3D",
+    route: "/mussolet-3d",
     indented: true
   },
   {
