@@ -6,10 +6,11 @@ import {StaticImageData} from "next/dist/client/image";
 type Props = {
   image: StaticImageData,
   description: string,
-  float: "left" | "right"
+  float: "left" | "right",
+  position?: "below" | "top" | "bottom"
 };
 
-const EmbeddedImage: React.FC<Props> = ({image, description, float}) => {
+const EmbeddedImage: React.FC<Props> = ({image, description, float, position = "below"}) => {
   return <Box sx={{
     mb: 2,
     ml: float === "right" ? 4 : 0,
@@ -27,7 +28,7 @@ const EmbeddedImage: React.FC<Props> = ({image, description, float}) => {
   }}>
     <ImageListItem>
       <Image src={image} alt={description} />
-      <ImageListItemBar title={description} position="below" sx={{textAlign: "center"}} />
+      <ImageListItemBar title={description} position={position} sx={{textAlign: "center"}} />
     </ImageListItem>
   </Box>;
 };

@@ -1,7 +1,20 @@
 import RacoGeganter from "../../components/RacoGeganter";
 import { racoGeganterPages } from "../../data";
+import FullSizeImage from "../../components/FullSizeImage";
+import Sobre from "../../public/gegants-cartro-sobre.jpg";
+import Muntats from "../../public/gegants-cartro-muntats.jpg";
+import { Grid } from "@mui/material";
 
 # Gegants de cartró
+
+<Grid container spacing={2}>
+  <Grid item xs={6}>
+    <FullSizeImage image={Sobre} alt="El sobre dels gegants de cartró" />
+  </Grid>
+  <Grid item xs={6}>
+    <FullSizeImage image={Muntats} alt="Els gegants de cartró muntats" />
+  </Grid>
+</Grid>
 
 En construcció.
 
