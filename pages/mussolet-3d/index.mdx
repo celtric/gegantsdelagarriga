@@ -11,6 +11,9 @@ import GegantsQuim from "../../public/gegants-quim.jpg";
 import MussoletFina from "../../public/mussolet-fina.jpg";
 import ImpressionMussolet from "../../public/impressio-mussolet.jpg";
 import IniciPintatMussolet from "../../public/inici-pintat-mussolet.jpg";
+import ModelatMussolet1 from "../../public/modelat-mussolet-1.jpg";
+import ModelatMussolet2 from "../../public/modelat-mussolet-2.jpg";
+import ModelatMussolet3 from "../../public/modelat-mussolet-3.jpg";
 import PintatMussolet1 from "../../public/pintat-mussolet-1.jpg";
 import PintatMussolet2 from "../../public/pintat-mussolet-2.jpg";
 import PintatMussolet3 from "../../public/pintat-mussolet-3.jpg";
@@ -55,7 +58,39 @@ com us ha arribat (i que ho pugueu reproduir en el vostre poble si sou una colla
 
 ## Creació del model 3D
 
-Pendent de contingut del Rafel.
+Com no disposàvem d'eines d'escaneig 3D, vam utilitzar una tècnica coneguda com a
+<Link href="https://ca.wikipedia.org/wiki/Fotogrametria" target="_blank">fotogrametria</Link>, i
+
+La primera part va consistir en fer unes 100 fotografies del mussolet. Amb l'aplicació Meshroom vam generar el model
+"brut" a partir d'aquestes fotografies (descartant algunes fotografies per fer el model més acurat).
+
+Amb el model "brut" generat amb Meshroom, vam procedir a la neteja i allisat del model amb Blender.
+
+El procés total va ser d'unes 20-25 hores aproximadament, i va ser portat a terme per una sola persona de la colla
+(gràcies Rafel!). Va estar repartit de la següent manera:
+
+- 2 hores de processat amb Meshroom
+- 10 proves canviant paràmetres i treient fotografies
+- 16 hores d'autoformació en Blender
+- 8 hores de neteja del model amb Blender
+
+<Grid container spacing={2}>
+  <Grid item xs={12} md={12}>
+    <Link href="/modelat-mussolet-1.jpg" target="_blank">
+      <FullSizeImage image={ModelatMussolet1} alt="Procés de modelat del Mussolet" mb={0} width={800} />
+    </Link>
+  </Grid>
+  <Grid item xs={12} md={6}>
+    <Link href="/modelat-mussolet-2.jpg" target="_blank">
+      <FullSizeImage image={ModelatMussolet2} alt="Procés de modelat del Mussolet" mb={0} width={300} />
+    </Link>
+  </Grid>
+  <Grid item xs={12} md={6}>
+    <Link href="/modelat-mussolet-3.jpg" target="_blank">
+      <FullSizeImage image={ModelatMussolet3} alt="Procés de modelat del Mussolet" mb={0} width={300} />
+    </Link>
+  </Grid>
+</Grid>
 
 ## Impressió de les figures
 
