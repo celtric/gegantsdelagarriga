@@ -7,6 +7,8 @@ import GegantsConvidats from "../../../../public/trobada-2023-gegants.png";
 import GegantsConvidatsSmall from "../../../../public/trobada-2023-gegants-small.png";
 import Cartell from "../../../../public/cartells-trobades/cartell-trobada-2023.jpg";
 import Image from "next/image";
+import {Alert, AlertTitle} from "@mui/lab";
+import {Celebration} from "@mui/icons-material";
 
 const trobada2023BackgroundColor = "#095577";
 const trobada2023BorderColor = "#082e3e";
@@ -34,6 +36,10 @@ const Index: React.FC = () => {
     <Divider sx={{maxWidth: 70, mx: "auto", my: [3, 3, 4]}} />
     <Box sx={{backgroundColor: "#fff", p: 2, pt: 0}}>
       <Container maxWidth="sm" sx={{pt: [0, 0, 0], pb: [0, 0, 4]}} disableGutters>
+        <Alert icon={<Celebration />} sx={{mb: 2}}>
+          <AlertTitle><strong>Gràcies a tothom participar!</strong></AlertTitle>
+          Ens veiem l&apos;any que ve una altra vegada!
+        </Alert>
         <Typography paragraph>
           El proper <strong>dissabte 3 de Juny de 2023</strong> tornarem a sortir als carrers del poble per celebrar la
           trenta-dosena edició de la trobada de gegants de la Garriga!
