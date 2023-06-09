@@ -21,7 +21,7 @@ type DataSchema = {
   month: string,
   place: string,
   type: string,
-  time: "Matí" | "Tarda" | "Vespre" | "Tot el dia",
+  time: "Matí" | "Tarda" | "Vespre" | "Nit" | "Tot el dia",
   done: boolean
 };
 
@@ -112,7 +112,7 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Corpus",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "10",
@@ -120,6 +120,14 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Corpus - Cercavila infantil",
     time: "Tarda",
+    done: false
+  },
+  {
+    day: "10",
+    month: "Juny",
+    place: "La Garriga",
+    type: "Sopar de Corpus",
+    time: "Nit",
     done: false
   },
   {
@@ -251,8 +259,36 @@ const Index: React.FC = () => {
       <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
         <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2023</Typography>
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
-        {data.filter(({done}) => !done).map(({day, month, place, type, time, done}, index) =>
-          <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
+        {data.filter(({done}) => !done).map(({day, month, place, type, time, done}, index) => <Fragment key={index}>
+          {type === "Sopar de Corpus" &&
+            <Paper sx={{
+              display: "block",
+              textDecoration: "none",
+              overflow: "hidden",
+              mb: 2,
+              cursor: "pointer",
+              "&:hover": {outline: `2px solid ${blue["700"]}`}
+            }} component={NextLink} href="/sopar-corpus.jpg" target="_blank">
+              <Grid container sx={{bgcolor: "#f6f8fa"}} alignItems="center">
+                <Grid item xs={2} textAlign="center">
+                  <Typography variant="h6" component="span">{day}</Typography>
+                  <Typography>{month}</Typography>
+                </Grid>
+                <Grid item container xs sx={{bgcolor: "#fff", p: 2, pt: 1}} alignItems="center">
+                  <Grid item xs>
+                    <Typography variant="h6" component="span">{type}</Typography>
+                    <Typography>{place}, {time}</Typography>
+                    <Typography>
+                      <Link>Més info &rsaquo;</Link>
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <ChevronRight fontSize="large" />
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Paper>}
+          {type !== "Sopar de Corpus" &&<Paper key={index} sx={{overflow: "hidden", mb: 2}}>
             <Grid container sx={{bgcolor: index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
               <Grid item xs={2} textAlign="center">
                 <Typography variant="h6" component="span">{day}</Typography>
@@ -263,7 +299,8 @@ const Index: React.FC = () => {
                 <Typography>{place}, {time}</Typography>
               </Grid>
             </Grid>
-          </Paper>)}
+          </Paper>}
+        </Fragment>)}
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>Veure sortides ja realitzades</AccordionSummary>
