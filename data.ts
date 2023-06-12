@@ -96,7 +96,7 @@ export const racoGeganterPages: {
     route: "/robots-geganters",
     indented: true
   },
-  {
+  /*{
     name: "Els vestits",
     route: "/els-vestits"
   },
@@ -107,7 +107,7 @@ export const racoGeganterPages: {
   {
     name: "Records de les trobades",
     route: "/records-trobades"
-  },
+  },*/
   {
     name: "Cartells de les trobades",
     route: "/cartells-trobades"
