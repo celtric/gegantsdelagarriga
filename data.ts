@@ -54,9 +54,6 @@ export const racoGeganterPages: {
     | "/gegants-de-cartro"
     | "/mussolet-3d"
     | "/robots-geganters"
-    | "/els-vestits"
-    | "/les-disfresses"
-    | "/records-trobades"
     | "/cartells-trobades"
     | "/catifes-corpus",
   indented?: boolean
@@ -96,18 +93,6 @@ export const racoGeganterPages: {
     route: "/robots-geganters",
     indented: true
   },
-  /*{
-    name: "Els vestits",
-    route: "/els-vestits"
-  },
-  {
-    name: "Les disfresses",
-    route: "/les-disfresses"
-  },
-  {
-    name: "Records de les trobades",
-    route: "/records-trobades"
-  },*/
   {
     name: "Cartells de les trobades",
     route: "/cartells-trobades"
