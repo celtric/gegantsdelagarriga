@@ -16,16 +16,18 @@ import StandardPage from "../../components/StandardPage";
 import NextLink from "next/link";
 import {blue} from "@mui/material/colors";
 
-type DataSchema = {
+type Event = {
   day: string,
   month: string,
   place: string,
   type: string,
   time: "Matí" | "Tarda" | "Vespre" | "Nit" | "Tot el dia",
+  url?: string,
+  externalUrl?: boolean,
   done: boolean
 };
 
-const data: DataSchema[] = [
+const events: Event[] = [
   {
     day: "21",
     month: "Gener",
@@ -104,6 +106,7 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "XXXII Trobada",
     time: "Tarda",
+    url: "/calendari/2023/trobada",
     done: true
   },
   {
@@ -120,7 +123,7 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Corpus - Cercavila infantil",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "10",
@@ -128,7 +131,9 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Sopar de Corpus",
     time: "Nit",
-    done: false
+    url: "/sopar-corpus.jpg",
+    externalUrl: true,
+    done: true
   },
   {
     day: "11",
@@ -136,7 +141,7 @@ const data: DataSchema[] = [
     place: "La Garriga",
     type: "Corpus - Catifa + Processó",
     time: "Tot el dia",
-    done: false
+    done: true
   },
   {
     day: "23",
@@ -252,6 +257,54 @@ const data: DataSchema[] = [
   }
 ];
 
+const EventList: React.FC<{ events: Event[], highlightFirst: boolean }> = ({events, highlightFirst}) => {
+  return <>
+    {events.map(({day, month, place, type, time, url, externalUrl, done}, index) =>
+      <Fragment key={index}>
+        {url &&
+          <Paper sx={{
+            display: "block",
+            textDecoration: "none",
+            overflow: "hidden",
+            mb: 2,
+            cursor: "pointer",
+            "&:hover": {outline: `2px solid ${blue["700"]}`}
+          }} component={NextLink} href={url} target={externalUrl === true ? "_blank" : undefined}>
+            <Grid container sx={{bgcolor: highlightFirst && index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
+              <Grid item xs={2} textAlign="center">
+                <Typography variant="h6" component="span">{day}</Typography>
+                <Typography>{month}</Typography>
+              </Grid>
+              <Grid item container xs sx={{bgcolor: "#fff", p: 2, pt: 1}} alignItems="center">
+                <Grid item xs>
+                  <Typography variant="h6" component="span">{type}</Typography>
+                  <Typography>{place}, {time}</Typography>
+                  <Typography>
+                    <Link>Més info &rsaquo;</Link>
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <ChevronRight fontSize="large" />
+                </Grid>
+              </Grid>
+            </Grid>
+          </Paper>}
+        {!url && <Paper key={index} sx={{overflow: "hidden", mb: 2}}>
+          <Grid container sx={{bgcolor: highlightFirst && index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
+            <Grid item xs={2} textAlign="center">
+              <Typography variant="h6" component="span">{day}</Typography>
+              <Typography>{month}</Typography>
+            </Grid>
+            <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
+              <Typography variant="h6" component="span">{type}</Typography>
+              <Typography>{place}, {time}</Typography>
+            </Grid>
+          </Grid>
+        </Paper>}
+      </Fragment>)}
+  </>;
+};
+
 const Index: React.FC = () => {
   return <>
     <Head><title>Calendari 2023</title></Head>
@@ -259,94 +312,12 @@ const Index: React.FC = () => {
       <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
         <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2023</Typography>
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
-        {data.filter(({done}) => !done).map(({day, month, place, type, time, done}, index) => <Fragment key={index}>
-          {type === "Sopar de Corpus" &&
-            <Paper sx={{
-              display: "block",
-              textDecoration: "none",
-              overflow: "hidden",
-              mb: 2,
-              cursor: "pointer",
-              "&:hover": {outline: `2px solid ${blue["700"]}`}
-            }} component={NextLink} href="/sopar-corpus.jpg" target="_blank">
-              <Grid container sx={{bgcolor: "#f6f8fa"}} alignItems="center">
-                <Grid item xs={2} textAlign="center">
-                  <Typography variant="h6" component="span">{day}</Typography>
-                  <Typography>{month}</Typography>
-                </Grid>
-                <Grid item container xs sx={{bgcolor: "#fff", p: 2, pt: 1}} alignItems="center">
-                  <Grid item xs>
-                    <Typography variant="h6" component="span">{type}</Typography>
-                    <Typography>{place}, {time}</Typography>
-                    <Typography>
-                      <Link>Més info &rsaquo;</Link>
-                    </Typography>
-                  </Grid>
-                  <Grid item>
-                    <ChevronRight fontSize="large" />
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Paper>}
-          {type !== "Sopar de Corpus" &&<Paper key={index} sx={{overflow: "hidden", mb: 2}}>
-            <Grid container sx={{bgcolor: index === 0 ? "#baebb7" : "#f6f8fa"}} alignItems="center">
-              <Grid item xs={2} textAlign="center">
-                <Typography variant="h6" component="span">{day}</Typography>
-                <Typography>{month}</Typography>
-              </Grid>
-              <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
-                <Typography variant="h6" component="span">{type}</Typography>
-                <Typography>{place}, {time}</Typography>
-              </Grid>
-            </Grid>
-          </Paper>}
-        </Fragment>)}
+        <EventList events={events.filter(({done}) => !done)} highlightFirst={true} />
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>Veure sortides ja realitzades</AccordionSummary>
           <AccordionDetails>
-            {data.filter(({done}) => done).map(({day, month, place, type, time, done}, index) => <Fragment key={index}>
-              {type === "XXXII Trobada" &&
-                <Paper sx={{
-                  display: "block",
-                  textDecoration: "none",
-                  overflow: "hidden",
-                  mb: 2,
-                  cursor: "pointer",
-                  "&:hover": {outline: `2px solid ${blue["700"]}`}
-                }} component={NextLink} href="/calendari/2023/trobada">
-                  <Grid container sx={{bgcolor: "#f6f8fa"}} alignItems="center">
-                    <Grid item xs={2} textAlign="center">
-                      <Typography variant="h6" component="span">{day}</Typography>
-                      <Typography>{month}</Typography>
-                    </Grid>
-                    <Grid item container xs sx={{bgcolor: "#fff", p: 2, pt: 1}} alignItems="center">
-                      <Grid item xs>
-                        <Typography variant="h6" component="span">{type}</Typography>
-                        <Typography>{place}, {time}</Typography>
-                        <Typography>
-                          <Link>Més info &rsaquo;</Link>
-                        </Typography>
-                      </Grid>
-                      <Grid item>
-                        <ChevronRight fontSize="large" />
-                      </Grid>
-                    </Grid>
-                  </Grid>
-                </Paper>}
-              {type !== "XXXII Trobada" &&<Paper sx={{overflow: "hidden", mb: 2}}>
-                <Grid container sx={{bgcolor: "#f6f8fa"}} alignItems="center">
-                  <Grid item xs={2} textAlign="center">
-                    <Typography variant="h6" component="span">{day}</Typography>
-                    <Typography>{month}</Typography>
-                  </Grid>
-                  <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
-                    <Typography variant="h6" component="span">{type}</Typography>
-                    <Typography>{place}, {time}</Typography>
-                  </Grid>
-                </Grid>
-              </Paper>}
-            </Fragment>)}
+            <EventList events={events.filter(({done}) => done)} highlightFirst={false} />
           </AccordionDetails>
         </Accordion>
         <Typography paragraph align="center" sx={{mt: 4}}>
