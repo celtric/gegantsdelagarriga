@@ -149,7 +149,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Flama del Canigó",
     time: "Vespre",
-    done: false
+    done: true
   },
   {
     day: "25",
