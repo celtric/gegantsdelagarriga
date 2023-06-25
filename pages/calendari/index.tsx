@@ -157,7 +157,7 @@ const events: Event[] = [
     place: "Olesa de Montserrat",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "1",
