@@ -165,7 +165,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "100 anys de la colla Sardanista",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "15",
