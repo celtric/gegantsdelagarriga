@@ -173,7 +173,7 @@ const events: Event[] = [
     place: "Castellterçol",
     type: "Trobada",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "27",
