@@ -184,6 +184,14 @@ const events: Event[] = [
     done: false
   },
   {
+    day: "21",
+    month: "Juliol",
+    place: "La Garriga",
+    type: "Saligarda - Cercavila",
+    time: "Tarda",
+    done: false
+  },
+  {
     day: "28",
     month: "Juliol",
     place: "La Garriga",
