@@ -189,15 +189,15 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Festa Major - Cercavila",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "28",
     month: "Juliol",
     place: "La Garriga",
-    type: "Festa Major - Taller de didals",
+    type: "Festa Major - Taller de capgrossos",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "30",
