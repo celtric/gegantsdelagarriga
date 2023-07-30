@@ -205,6 +205,14 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Festa Major - Cercavila avis",
     time: "Matí",
+    done: true
+  },
+  {
+    day: "30",
+    month: "Juliol",
+    place: "La Garriga",
+    type: "Festa Major - Seguici final",
+    time: "Nit",
     done: false
   },
   {
