@@ -21,7 +21,7 @@ type Event = {
   month: string,
   place: string,
   type: string,
-  time: "Matí" | "Tarda" | "Vespre" | "Nit" | "Tot el dia",
+  time?: "Matí" | "Tarda" | "Vespre" | "Nit" | "Tot el dia",
   url?: string,
   externalUrl?: boolean,
   done: boolean
@@ -213,6 +213,13 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Festa Major - Seguici final",
     time: "Nit",
+    done: true
+  },
+  {
+    day: "",
+    month: "Agost",
+    place: "Ens tornem a finals d'agost!",
+    type: "BON ESTIU!",
     done: false
   },
   {
@@ -275,7 +282,7 @@ const events: Event[] = [
 
 const EventList: React.FC<{ events: Event[], highlightFirst: boolean }> = ({events, highlightFirst}) => {
   return <>
-    {events.map(({day, month, place, type, time, url, externalUrl, done}, index) =>
+    {events.map(({day, month, place, type, time, url, externalUrl}, index) =>
       <Fragment key={index}>
         {url &&
           <Paper sx={{
@@ -313,7 +320,7 @@ const EventList: React.FC<{ events: Event[], highlightFirst: boolean }> = ({even
             </Grid>
             <Grid item xs sx={{bgcolor: "#fff", p: 2, pt: 1}}>
               <Typography variant="h6" component="span">{type}</Typography>
-              <Typography>{place}, {time}</Typography>
+              <Typography>{place}{time && `, ${time}`}</Typography>
             </Grid>
           </Grid>
         </Paper>}
