@@ -218,7 +218,7 @@ const events: Event[] = [
   {
     day: "",
     month: "Agost",
-    place: "Ens tornem a finals d'agost!",
+    place: "Ens tornem a veure a finals d'agost!",
     type: "BON ESTIU!",
     done: false
   },
