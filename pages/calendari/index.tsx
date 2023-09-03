@@ -224,14 +224,6 @@ const events: Event[] = [
     done: true
   },
   {
-    day: "9",
-    month: "Setembre",
-    place: "Sant Celoni",
-    type: "Trobada",
-    time: "Tarda",
-    done: false
-  },
-  {
     day: "16",
     month: "Setembre",
     place: "Sabadell-Gràcia",
