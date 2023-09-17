@@ -229,7 +229,7 @@ const events: Event[] = [
     place: "Sabadell-Gràcia",
     type: "Trobada",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "7 i 8",
