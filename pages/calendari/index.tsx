@@ -232,11 +232,11 @@ const events: Event[] = [
     done: true
   },
   {
-    day: "14 i 15",
+    day: "14",
     month: "Octubre",
     place: "La Garriga",
     type: "Jornades Modernistes",
-    time: "Tot el dia",
+    time: "Matí",
     done: false
   },
   {
