@@ -237,7 +237,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Jornades Modernistes",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "22",
