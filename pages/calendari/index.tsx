@@ -245,7 +245,7 @@ const events: Event[] = [
     place: "Sabadell-Gràcia",
     type: "Trobada comarcal",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "26",
