@@ -248,6 +248,14 @@ const events: Event[] = [
     done: true
   },
   {
+    day: "18",
+    month: "Novembre",
+    place: "La Garriga",
+    type: "Homenatge a Oriol Parés",
+    time: "Tarda",
+    done: false
+  },
+  {
     day: "26",
     month: "Novembre",
     place: "Aiguafreda",
