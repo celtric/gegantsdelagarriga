@@ -253,7 +253,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Homenatge a Oriol Parés",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "26",
