@@ -253,7 +253,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Homenatge a Oriol Parés",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "26",
@@ -261,7 +261,7 @@ const events: Event[] = [
     place: "Aiguafreda",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "31",
