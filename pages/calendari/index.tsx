@@ -246,13 +246,13 @@ const Index: React.FC = () => {
         <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2024</Typography>
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
         <EventList events={events.filter(({done}) => !done)} highlightFirst={true} />
-        <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
+        {/*<Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>Veure sortides ja realitzades</AccordionSummary>
           <AccordionDetails>
             <EventList events={events.filter(({done}) => done)} highlightFirst={false} />
           </AccordionDetails>
-        </Accordion>
+        </Accordion>*/}
         <Typography paragraph align="center" sx={{mt: 4}}>
           <Button variant="contained" startIcon={<Download />} href="/calendari-2024.pdf" target="_blank">
             Descarregar calendari 2024 en PDF
