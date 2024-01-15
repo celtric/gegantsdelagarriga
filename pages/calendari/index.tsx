@@ -18,10 +18,10 @@ import {blue} from "@mui/material/colors";
 
 type Event = {
   day: string,
-  month: string,
+  month: "Gener" | "Febrer" | "Març" | "Abril" | "Maig" | "Juny" | "Juliol" | "Agost" | "Setembre" | "Octubre" | "Novembre" | "Desembre",
   place: string,
   type: string,
-  time: "Matí" | "Tarda" | "Vespre" | "Nit" | "Tot el dia",
+  time: "Matí" | "Tarda" | "Vespre" | "Nit" | "Tot el dia" | "A concretar",
   url?: string,
   externalUrl?: boolean,
   done: boolean
@@ -29,239 +29,156 @@ type Event = {
 
 const events: Event[] = [
   {
-    day: "21",
+    day: "27",
     month: "Gener",
-    place: "Les Borges del Camp",
+    place: "Mataró - La Llàntia",
     type: "Trobada",
-    time: "Matí",
-    done: true
+    time: "Tarda",
+    done: false
   },
   {
-    day: "4",
+    day: "24",
     month: "Febrer",
     place: "Granollers",
     type: "Cursa de gegants",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "26",
-    month: "Febrer",
+    day: "2",
+    month: "Març",
     place: "La Garriga",
-    type: "Ball de gitanes",
+    type: "Fira de la botifarra",
     time: "Matí",
-    done: true
+    done: false
   },
   {
-    day: "4 i 5",
-    month: "Març",
+    day: "14",
+    month: "Abril",
     place: "La Garriga",
-    type: "Fira de la Botifarra",
-    time: "Tot el dia",
-    done: true
+    type: "Tres Tombs",
+    time: "Matí",
+    done: false
   },
   {
-    day: "11",
-    month: "Març",
-    place: "La Garriga",
-    type: "Presentació Federació",
-    time: "Tarda",
-    done: true
+    day: "21",
+    month: "Abril",
+    place: "La Garriga - Puiggraciós",
+    type: "Aplec de Puiggraciós",
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "1",
+    month: "Maig",
+    place: "Vilassar de Dalt",
+    type: "Trobada",
+    time: "Matí",
+    done: false
   },
   {
     day: "19",
-    month: "Març",
-    place: "Manresa-Poble Nou",
-    type: "Trobada",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "15",
-    month: "Abril",
-    place: "Piera",
-    type: "Trobada",
-    time: "Tarda",
-    done: true
-  },
-  {
-    day: "16",
-    month: "Abril",
-    place: "La Garriga",
-    type: "Tres tombs",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "7",
     month: "Maig",
-    place: "Cabrils",
+    place: "Sta. Eulàlia de Ronçana",
     type: "Trobada",
     time: "Matí",
-    done: true
+    done: false
   },
   {
-    day: "3",
+    day: "25",
+    month: "Maig",
+    place: "La Garriga",
+    type: "XXXIII Trobada de gegants",
+    time: "Tarda",
+    done: false
+  },
+  {
+    day: "1",
     month: "Juny",
     place: "La Garriga",
-    type: "XXXII Trobada",
+    type: "Cercavila infantil",
     time: "Tarda",
-    url: "/calendari/2023/trobada",
-    done: true
+    done: false
   },
   {
-    day: "8",
+    day: "2",
     month: "Juny",
     place: "La Garriga",
     type: "Corpus",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "10",
-    month: "Juny",
-    place: "La Garriga",
-    type: "Corpus - Cercavila infantil",
-    time: "Tarda",
-    done: true
-  },
-  {
-    day: "10",
-    month: "Juny",
-    place: "La Garriga",
-    type: "Sopar de Corpus",
-    time: "Nit",
-    url: "/sopar-corpus.jpg",
-    externalUrl: true,
-    done: true
-  },
-  {
-    day: "11",
-    month: "Juny",
-    place: "La Garriga",
-    type: "Corpus - Catifa + Processó",
     time: "Tot el dia",
-    done: true
+    done: false
   },
   {
     day: "23",
     month: "Juny",
-    place: "La Garriga",
+    place: "Coll d'Ares",
     type: "Flama del Canigó",
-    time: "Vespre",
-    done: true
+    time: "Tot el dia",
+    done: false
   },
   {
-    day: "25",
+    day: "29",
     month: "Juny",
-    place: "Olesa de Montserrat",
-    type: "Trobada",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "1",
-    month: "Juliol",
-    place: "La Garriga",
-    type: "100 anys de la colla Sardanista",
-    time: "Tarda",
-    done: true
-  },
-  {
-    day: "15",
-    month: "Juliol",
-    place: "Castellterçol",
+    place: "Abrera",
     type: "Trobada",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "21",
+    day: "20",
     month: "Juliol",
-    place: "La Garriga",
-    type: "Saligarda - Cercavila",
+    place: "Thuir",
+    type: "Trobada",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
     day: "27",
     month: "Juliol",
     place: "La Garriga",
-    type: "Festa Major - Cercavila",
+    type: "Saligarda",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "28",
-    month: "Juliol",
-    place: "La Garriga",
-    type: "Festa Major - Taller de capgrossos",
-    time: "Tarda",
-    done: true
-  },
-  {
-    day: "30",
-    month: "Juliol",
-    place: "La Garriga",
-    type: "Festa Major - Cercavila avis",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "30",
-    month: "Juliol",
-    place: "La Garriga",
-    type: "Festa Major - Seguici final",
-    time: "Nit",
-    done: true
-  },
-  {
-    day: "26",
+    day: "1-4",
     month: "Agost",
-    place: "Sant Hilari Sacalm",
-    type: "Trobada",
-    time: "Matí",
-    done: true
+    place: "La Garriga",
+    type: "Festa major",
+    time: "A concretar",
+    done: false
   },
   {
-    day: "16",
+    day: "8",
     month: "Setembre",
-    place: "Sabadell-Gràcia",
-    type: "Trobada",
-    time: "Tarda",
-    done: true
-  },
-  {
-    day: "14",
-    month: "Octubre",
-    place: "La Garriga",
-    type: "Jornades Modernistes",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "22",
-    month: "Octubre",
-    place: "Sabadell-Gràcia",
-    type: "Trobada comarcal",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "18",
-    month: "Novembre",
-    place: "La Garriga",
-    type: "Homenatge a Oriol Parés",
-    time: "Tarda",
-    done: true
-  },
-  {
-    day: "26",
-    month: "Novembre",
-    place: "Aiguafreda",
+    place: "Vilobí d'Onyar",
     type: "Trobada",
     time: "Matí",
-    done: true
+    done: false
+  },
+  {
+    day: "29",
+    month: "Setembre",
+    place: "Taradell",
+    type: "Trobada",
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "20",
+    month: "Octubre",
+    place: "St. Llorenç Savall",
+    type: "Trobada",
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "10",
+    month: "Novembre",
+    place: "Teià",
+    type: "Trobada",
+    time: "Matí",
+    done: false
   },
   {
     day: "31",
@@ -323,10 +240,10 @@ const EventList: React.FC<{ events: Event[], highlightFirst: boolean }> = ({even
 
 const Index: React.FC = () => {
   return <>
-    <Head><title>Calendari 2023</title></Head>
+    <Head><title>Calendari 2024</title></Head>
     <StandardPage>
       <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
-        <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2023</Typography>
+        <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2024</Typography>
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
         <EventList events={events.filter(({done}) => !done)} highlightFirst={true} />
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
@@ -337,8 +254,8 @@ const Index: React.FC = () => {
           </AccordionDetails>
         </Accordion>
         <Typography paragraph align="center" sx={{mt: 4}}>
-          <Button variant="contained" startIcon={<Download />} href="/calendari-2023.pdf" target="_blank">
-            Descarregar calendari 2023 en PDF
+          <Button variant="contained" startIcon={<Download />} href="/calendari-2024.pdf" target="_blank">
+            Descarregar calendari 2024 en PDF
           </Button>
         </Typography>
       </Container>
