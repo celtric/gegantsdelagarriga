@@ -37,6 +37,14 @@ const events: Event[] = [
     done: true
   },
   {
+    day: "9",
+    month: "Febrer",
+    place: "La Garriga",
+    type: "Festa major Escola Els Pinetons",
+    time: "Tarda",
+    done: true
+  },
+  {
     day: "24",
     month: "Febrer",
     place: "Granollers",
