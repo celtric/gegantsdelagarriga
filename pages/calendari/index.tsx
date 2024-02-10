@@ -45,6 +45,14 @@ const events: Event[] = [
     done: true
   },
   {
+    day: "18",
+    month: "Febrer",
+    place: "La Garriga",
+    type: "Ballada de gitanes",
+    time: "Matí",
+    done: false
+  },
+  {
     day: "24",
     month: "Febrer",
     place: "Granollers",
