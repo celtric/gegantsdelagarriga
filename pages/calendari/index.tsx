@@ -50,7 +50,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Ballada de gitanes",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "24",
