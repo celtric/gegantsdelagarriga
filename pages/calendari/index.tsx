@@ -58,7 +58,7 @@ const events: Event[] = [
     place: "Granollers",
     type: "Cursa de gegants",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "2",
