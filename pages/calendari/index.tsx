@@ -66,7 +66,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Fira de la botifarra",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "9",
