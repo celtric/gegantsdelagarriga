@@ -98,7 +98,7 @@ const events: Event[] = [
     place: "La Garriga - Puiggraciós",
     type: "Aplec de Puiggraciós",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "1",
