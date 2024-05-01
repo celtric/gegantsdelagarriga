@@ -106,7 +106,7 @@ const events: Event[] = [
     place: "Vilassar de Dalt",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "19",
