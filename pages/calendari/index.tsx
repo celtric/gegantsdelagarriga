@@ -114,7 +114,7 @@ const events: Event[] = [
     place: "Sta. Eulàlia de Ronçana",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "25",
