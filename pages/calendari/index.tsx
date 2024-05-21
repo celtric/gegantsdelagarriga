@@ -15,6 +15,8 @@ import {ChevronRight, Download, ExpandMore} from "@mui/icons-material";
 import StandardPage from "../../components/StandardPage";
 import NextLink from "next/link";
 import {blue} from "@mui/material/colors";
+import CartellTrobada2024 from "../../public/cartells-trobades/cartell-trobada-2024.png";
+import FullSizeImage from "../../components/FullSizeImage";
 
 type Event = {
   day: string,
@@ -276,6 +278,7 @@ const Index: React.FC = () => {
     <StandardPage>
       <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
         <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2024</Typography>
+        <FullSizeImage image={CartellTrobada2024} alt="Cartell de la trobada de 2024" mb={0} width={600} />
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
         <EventList events={events.filter(({done}) => !done)} highlightFirst={true} />
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
