@@ -124,7 +124,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "XXXIII Trobada de gegants",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "1",
