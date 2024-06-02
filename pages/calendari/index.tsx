@@ -139,7 +139,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Corpus",
     time: "Tot el dia",
-    done: false
+    done: true
   },
   {
     day: "23",
