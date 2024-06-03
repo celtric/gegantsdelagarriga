@@ -3,6 +3,7 @@ import { racoGeganterPages } from "../../data";
 import { Grid } from "@mui/material";
 import Link from "next/link";
 import FullSizeImage from "../../components/FullSizeImage";
+import DissenyCatifaCorpus2024 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2024.jpg";
 import DissenyCatifaCorpus2023 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2023.jpg";
 import DissenyCatifaCorpus2022 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2022.jpg";
 import DissenyCatifaCorpus2019 from "../../public/dissenys-catifes-corpus/disseny-catifa-corpus-2019.jpg";
@@ -14,6 +15,12 @@ import DissenyCatifaCorpus2015 from "../../public/dissenys-catifes-corpus/dissen
 # Catifes de Corpus
 
 <Grid container spacing={2}>
+  <Grid item xs={6} md={2}>
+    ## 2024
+    <Link href="/dissenys-catifes-corpus/disseny-catifa-corpus-2024.jpg" target="_blank">
+      <FullSizeImage image={DissenyCatifaCorpus2024} alt="Disseny de la catifa de Corpus de 2024" mb={0} width={200} />
+    </Link>
+  </Grid>
   <Grid item xs={6} md={2}>
     ## 2023
     <Link href="/dissenys-catifes-corpus/disseny-catifa-corpus-2023.jpg" target="_blank">
