@@ -147,7 +147,7 @@ const events: Event[] = [
     place: "Coll d'Ares",
     type: "Flama del Canigó",
     time: "Tot el dia",
-    done: false
+    done: true
   },
   {
     day: "29",
