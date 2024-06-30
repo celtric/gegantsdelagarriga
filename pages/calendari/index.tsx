@@ -155,7 +155,7 @@ const events: Event[] = [
     place: "Abrera",
     type: "Trobada",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "20",
