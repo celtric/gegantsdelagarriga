@@ -186,7 +186,7 @@ const events: Event[] = [
     month: "Setembre",
     place: "Vilobí d'Onyar",
     type: "Trobada",
-    time: "Matí",
+    time: "Tarda",
     done: false
   },
   {
