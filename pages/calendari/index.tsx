@@ -187,7 +187,7 @@ const events: Event[] = [
     place: "Vilobí d'Onyar",
     type: "Trobada",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "29",
