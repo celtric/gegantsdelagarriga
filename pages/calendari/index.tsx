@@ -30,188 +30,188 @@ type Event = {
 
 const events: Event[] = [
   {
-    day: "27",
+    day: "19",
     month: "Gener",
-    place: "Mataró - La Llàntia",
+    place: "Sant Antoni de Vilamajor",
     type: "Trobada",
-    time: "Tarda",
-    done: true
+    time: "Matí",
+    done: false
   },
   {
     day: "9",
     month: "Febrer",
+    place: "Pallejà",
+    type: "Trobada",
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "15",
+    month: "Març",
     place: "La Garriga",
-    type: "Festa major Escola Els Pinetons",
-    time: "Tarda",
-    done: true
+    type: "Fira de la Botifarra",
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "30",
+    month: "Març",
+    place: "La Garriga",
+    type: "Tres tombs",
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "27",
+    month: "Abril",
+    place: "Argentona",
+    type: "Trobada",
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "3",
+    month: "Maig",
+    place: "Puiggraciós",
+    type: "Baixada de la verge",
+    time: "Nit",
+    done: false
+  },
+  {
+    day: "4",
+    month: "Maig",
+    place: "Puiggraciós",
+    type: "Travessa",
+    time: "Matí",
+    done: false
   },
   {
     day: "18",
-    month: "Febrer",
-    place: "La Garriga",
-    type: "Ballada de gitanes",
+    month: "Maig",
+    place: "Barcelona-Guinardó",
+    type: "Trobada",
     time: "Matí",
-    done: true
-  },
-  {
-    day: "24",
-    month: "Febrer",
-    place: "Granollers",
-    type: "Cursa de gegants",
-    time: "Tarda",
-    done: true
-  },
-  {
-    day: "2",
-    month: "Març",
-    place: "La Garriga",
-    type: "Fira de la botifarra",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "9",
-    month: "Març",
-    place: "La Garriga",
-    type: "Saligarda",
-    time: "Tarda",
-    done: true
+    done: false
   },
   {
     day: "14",
-    month: "Abril",
+    month: "Juny",
     place: "La Garriga",
-    type: "Tres Tombs",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "20",
-    month: "Abril",
-    place: "La Garriga",
-    type: "Baixada Verge",
-    time: "Nit",
-    done: true
-  },
-  {
-    day: "21",
-    month: "Abril",
-    place: "La Garriga - Puiggraciós",
-    type: "Aplec de Puiggraciós",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "1",
-    month: "Maig",
-    place: "Vilassar de Dalt",
-    type: "Trobada",
-    time: "Matí",
-    done: true
+    type: "34a Trobada de gegants",
+    time: "Tarda",
+    done: false
   },
   {
     day: "19",
-    month: "Maig",
-    place: "Sta. Eulàlia de Ronçana",
-    type: "Trobada",
-    time: "Matí",
-    done: true
-  },
-  {
-    day: "25",
-    month: "Maig",
+    month: "Juny",
     place: "La Garriga",
-    type: "XXXIII Trobada de gegants",
+    type: "Balls de Corpus",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "1",
+    day: "21",
     month: "Juny",
     place: "La Garriga",
     type: "Cercavila infantil",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "2",
+    day: "22",
     month: "Juny",
     place: "La Garriga",
-    type: "Corpus",
+    type: "Corpus - Catifa i processó",
     time: "Tot el dia",
-    done: true
+    done: false
   },
   {
     day: "23",
     month: "Juny",
-    place: "Coll d'Ares",
+    place: "La Garriga",
     type: "Flama del Canigó",
-    time: "Tot el dia",
-    done: true
+    time: "Tarda",
+    done: false
   },
   {
-    day: "29",
+    day: "28",
     month: "Juny",
-    place: "Abrera",
+    place: "Sant Pere de Torelló",
     type: "Trobada",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "20",
+    day: "12",
     month: "Juliol",
-    place: "Thuir",
+    place: "Esparraguera",
     type: "Trobada",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "27",
+    day: "25",
     month: "Juliol",
     place: "La Garriga",
     type: "Saligarda",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "1-4",
+    day: "31",
+    month: "Juliol",
+    place: "La Garriga",
+    type: "Festa major",
+    time: "Tarda",
+    done: false
+  },
+  {
+    day: "1",
     month: "Agost",
     place: "La Garriga",
     type: "Festa major",
     time: "A concretar",
-    done: true
+    done: false
   },
   {
-    day: "8",
+    day: "3",
+    month: "Agost",
+    place: "La Garriga",
+    type: "Festa major",
+    time: "Tot el dia",
+    done: false
+  },
+  {
+    day: "6",
     month: "Setembre",
-    place: "Vilobí d'Onyar",
+    place: "Beguda Alta",
     type: "Trobada",
     time: "Tarda",
-    done: true
+    done: false
   },
   {
-    day: "29",
+    day: "28",
     month: "Setembre",
-    place: "Taradell",
-    type: "Trobada",
+    place: "Lliçà d'Amunt",
+    type: "Trobada comarcal",
     time: "Matí",
-    done: true
+    done: false
   },
   {
-    day: "20",
+    day: "11",
     month: "Octubre",
-    place: "St. Llorenç Savall",
+    place: "Fraga",
     type: "Trobada",
-    time: "Matí",
-    done: true
+    time: "Tarda",
+    done: false
   },
   {
-    day: "10",
+    day: "9",
     month: "Novembre",
-    place: "Teià",
+    place: "Sentmenat",
     type: "Trobada",
     time: "Matí",
-    done: true
+    done: false
   },
   {
     day: "31",
@@ -273,10 +273,10 @@ const EventList: React.FC<{ events: Event[], highlightFirst: boolean }> = ({even
 
 const Index: React.FC = () => {
   return <>
-    <Head><title>Calendari 2024</title></Head>
+    <Head><title>Calendari 2025</title></Head>
     <StandardPage>
       <Container maxWidth="sm" sx={{mt: 5, mb: 10}} disableGutters>
-        <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2024</Typography>
+        <Typography component="h1" variant="h1" gutterBottom sx={{mb: 3}}>Calendari 2025</Typography>
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Properes sortides</Typography>
         <EventList events={events.filter(({done}) => !done)} highlightFirst={true} />
         <Typography component="h2" variant="h2" gutterBottom sx={{my: 3}}>Sortides realitzades</Typography>
@@ -287,8 +287,8 @@ const Index: React.FC = () => {
           </AccordionDetails>
         </Accordion>
         <Typography paragraph align="center" sx={{mt: 4}}>
-          <Button variant="contained" startIcon={<Download />} href="/calendari-2024.pdf" target="_blank">
-            Descarregar calendari 2024 en PDF
+          <Button variant="contained" startIcon={<Download />} href="/calendari-2025.pdf" target="_blank">
+            Descarregar calendari 2025 en PDF
           </Button>
         </Typography>
       </Container>
