@@ -35,7 +35,7 @@ const events: Event[] = [
     place: "Sant Antoni de Vilamajor",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "9",
