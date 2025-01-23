@@ -144,7 +144,7 @@ const events: Event[] = [
   {
     day: "12",
     month: "Juliol",
-    place: "Esparraguera",
+    place: "Tordera",
     type: "Trobada",
     time: "Tarda",
     done: false
