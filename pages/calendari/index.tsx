@@ -47,6 +47,14 @@ const events: Event[] = [
   },
   {
     day: "15",
+    month: "Febrer",
+    place: "La Garriga",
+    type: "Malhivern, festa popular d'hivern",
+    time: "Tarda",
+    done: false
+  },
+  {
+    day: "15",
     month: "Març",
     place: "La Garriga",
     type: "Fira de la Botifarra",
