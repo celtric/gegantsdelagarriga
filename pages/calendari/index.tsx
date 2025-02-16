@@ -51,7 +51,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Malhivern, festa popular d'hivern",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "15",
