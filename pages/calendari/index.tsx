@@ -67,7 +67,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Tres tombs",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "27",
