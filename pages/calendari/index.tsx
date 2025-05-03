@@ -83,7 +83,7 @@ const events: Event[] = [
     place: "Puiggraciós",
     type: "Baixada de la verge",
     time: "Nit",
-    done: false
+    done: true
   },
   {
     day: "4",
