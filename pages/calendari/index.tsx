@@ -75,7 +75,7 @@ const events: Event[] = [
     place: "Argentona",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "3",
@@ -99,7 +99,7 @@ const events: Event[] = [
     place: "Barcelona-Guinardó",
     type: "Trobada",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "14",
