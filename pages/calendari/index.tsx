@@ -102,7 +102,15 @@ const events: Event[] = [
     done: true
   },
   {
-    day: "14",
+    day: "1",
+    month: "Juny",
+    place: "La Garriga",
+    type: "45e aniversari del Artristres",
+    time: "Matí",
+    done: false
+  },
+  {
+    day: "15",
     month: "Juny",
     place: "La Garriga",
     type: "34a Trobada de gegants",
