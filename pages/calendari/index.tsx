@@ -105,7 +105,7 @@ const events: Event[] = [
     day: "1",
     month: "Juny",
     place: "La Garriga",
-    type: "45e aniversari del Artristres",
+    type: "45è aniversari del Artristres",
     time: "Matí",
     done: false
   },
