@@ -123,7 +123,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Balls de Corpus",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "21",
@@ -131,7 +131,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Cercavila infantil",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "22",
@@ -139,7 +139,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Corpus - Catifa i processó",
     time: "Tot el dia",
-    done: false
+    done: true
   },
   {
     day: "23",
