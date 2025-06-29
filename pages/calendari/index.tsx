@@ -154,11 +154,11 @@ const events: Event[] = [
     month: "Juny",
     place: "Sant Pere de Torelló",
     type: "Trobada",
-    time: "Tarda",
+    time: "true",
     done: false
   },
   {
-    day: "12",
+    day: "19",
     month: "Juliol",
     place: "Tordera",
     type: "Trobada",
