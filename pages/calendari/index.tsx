@@ -126,6 +126,14 @@ const events: Event[] = [
     done: true
   },
   {
+    day: "20",
+    month: "Juny",
+    place: "La Garriga",
+    type: "La Pellofa",
+    time: "Nit",
+    done: true
+  },
+  {
     day: "21",
     month: "Juny",
     place: "La Garriga",
