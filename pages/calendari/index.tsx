@@ -187,7 +187,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Festa major",
     time: "Tarda",
-    done: false
+    done: true
   },
   {
     day: "1",
@@ -195,7 +195,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Festa major",
     time: "A concretar",
-    done: false
+    done: true
   },
   {
     day: "3",
@@ -203,7 +203,7 @@ const events: Event[] = [
     place: "La Garriga",
     type: "Festa major",
     time: "Tot el dia",
-    done: false
+    done: true
   },
   {
     day: "6",
