@@ -219,7 +219,7 @@ const events: Event[] = [
     place: "Lliçà d'Amunt",
     type: "Trobada comarcal",
     time: "Matí",
-    done: false
+    done: true
   },
   {
     day: "11",
